@@ -25,7 +25,7 @@ jobs:
 
       - name: Export new components
         run: |
-          cd ../sw-ui-lib
+          cd sw-ui-lib
           node add-component.js
 
       - name: Build library
