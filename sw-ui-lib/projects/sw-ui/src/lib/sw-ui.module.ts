@@ -12,6 +12,7 @@ import { SwIconsDropdownListComponent } from './drop-lists/sw-icons-dropdown-lis
 import { TrybuttComponent } from '../public-api';
 import { TrynavComponent } from './navbars/trynav/trynav.component';
 import { Trynav22Component } from './navbars/trynav22/trynav22.component';
+import { NewnavComponent } from './navbars/newnav/newnav.component';
 
 
 
@@ -42,7 +43,8 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
   SwPrimaryButtonComponent,
   TrynavComponent,
   Trynav22Component,
-  Trynav22Component
+  Trynav22Component,
+  NewnavComponent
 
 
 
