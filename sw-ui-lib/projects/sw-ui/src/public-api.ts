@@ -1,4 +1,5 @@
 
+export * from './lib/buttons/newbutton/newbutton.component';
 export * from './lib/buttons/sw-primary-button/sw-primary-button.component';
 export * from './lib/buttons/sw-secondary-button/sw-secondary-button.component';
 export * from './lib/buttons/sw-success-button/sw-success-button.component';
