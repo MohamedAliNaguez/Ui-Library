@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd projects/sw-ui
+          cd sw-ui-lib
           npm install
 
       - name: Export new components
