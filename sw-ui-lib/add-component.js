@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const semver = require('semver'); // Import the semver library for version management
 
 // Paths to relevant files
 const srcPath = path.join(__dirname, 'projects', 'sw-ui', 'src', 'lib');
 const modulePath = path.join(srcPath, 'sw-ui.module.ts');
 const publicApiPath = path.join(__dirname, 'projects', 'sw-ui', 'src', 'public-api.ts');
+const packageJsonPath = path.join(__dirname, 'projects', 'sw-ui', 'package.json');
 
 // Convert file name to PascalCase
 const toPascalCase = (fileName) => {
@@ -97,7 +99,24 @@ const updatePublicApiFile = (components) => {
   }
 };
 
+// Update the package.json version
+const updatePackageVersion = () => {
+  try {
+    let packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    let currentVersion = packageJson.version;
+    
+    let newVersion = semver.inc(currentVersion, 'patch'); // Increment the version
+    packageJson.version = newVersion;
+
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2), 'utf8');
+    console.log(`Updated package version to: ${newVersion}`);
+  } catch (error) {
+    console.error(`Error updating package version: ${error.message}`);
+  }
+};
+
 // Execute script
 const components = getComponents(srcPath, srcPath);
 updateModuleFile(components);
 updatePublicApiFile(components);
+updatePackageVersion();
