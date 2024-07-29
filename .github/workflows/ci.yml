@@ -19,15 +19,19 @@ jobs:
           node-version: '20' 
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd sw-ui-lib
+          npm install
 
       - name: Export new components
-        run: node add-component.js
-
-      
+        run: |
+          cd sw-ui-lib
+          node add-component.js
 
       - name: Build library
-        run: ng build sw-ui
+        run: |
+          cd sw-ui-lib
+          ng build sw-ui
 
       - name: Update version and push changes
         run: |
@@ -36,7 +40,7 @@ jobs:
           cd projects/sw-ui
           npx standard-version --release-as patch  # or minor/major as per your needs
           cd ../..
-          git add projects/sw-ui/package.json
+          git add sw-ui-lib/projects/sw-ui/package.json
           git commit -m "chore(release): bump version"
           git push --follow-tags origin main  # make sure to push the tags
 
@@ -44,5 +48,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          cd dist/sw-ui
+          cd sw-ui-lib/dist/sw-ui
           npm publish
