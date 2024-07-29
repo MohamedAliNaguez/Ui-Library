@@ -19,15 +19,19 @@ jobs:
           node-version: '20' 
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd projects/sw-ui
+          npm install
 
       - name: Export new components
-        run: node add-component.js
-
-      
+        run: |
+          cd projects/sw-ui
+          node add-component.js
 
       - name: Build library
-        run: ng build sw-ui
+        run: |
+          cd projects/sw-ui
+          ng build sw-ui
 
       - name: Update version and push changes
         run: |
@@ -44,5 +48,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          cd dist/sw-ui
+          cd projects/sw-ui/dist/sw-ui
           npm publish
