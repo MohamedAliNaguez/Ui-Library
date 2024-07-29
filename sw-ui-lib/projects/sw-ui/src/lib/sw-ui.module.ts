@@ -30,6 +30,7 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
   
   
   
+  
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -44,7 +45,6 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
   SwPrimaryButtonComponent,
   TrynavComponent,
   Trynav22Component,
-  Trynav22Component,
   NewnavComponent
 
 
@@ -54,10 +54,13 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
 
 
 
+,
+  NewnavComponent
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -101,6 +104,8 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
 
 
 
+,
+  NewnavComponent
 ]
 })
 export class SwUiModule { }
