@@ -18,13 +18,11 @@ jobs:
         with:
           node-version: '20' 
 
-      - name: List files in root
-        run: ls -la
+      
 
       - name: Install dependencies
         run: |
           cd sw-ui-lib
-          ls -la  # List files in sw-ui-lib to confirm location
           npm install
 
       - name: Export new components
