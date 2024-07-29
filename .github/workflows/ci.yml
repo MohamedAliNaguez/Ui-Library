@@ -49,9 +49,11 @@ jobs:
           git commit -m "chore(release): bump version"
           git push --follow-tags origin main  # make sure to push the tags
 
+      - name: Login to npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           cd sw-ui-lib/dist/sw-ui
           npm publish
