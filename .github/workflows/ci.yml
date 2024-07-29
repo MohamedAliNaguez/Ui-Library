@@ -46,7 +46,7 @@ jobs:
           npx standard-version --release-as patch  # or minor/major as per your needs
           cd ../..
           ls -la
-          git add projects/sw-ui/package.json
+          git add .
           git commit -m "chore(release): bump version"
           git push --follow-tags origin main  # make sure to push the tags
 
