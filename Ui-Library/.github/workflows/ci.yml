@@ -26,7 +26,7 @@ jobs:
       - name: Export new components
         run: |
           cd sw-ui-lib
-          ls -la  # List files in sw-ui-lib again to confirm add-component.js is present
+          ls -la  
           node add-component.js
 
       - name: Build library
