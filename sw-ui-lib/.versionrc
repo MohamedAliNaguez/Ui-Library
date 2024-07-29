@@ -1,0 +1,4 @@
+{
+  "packageFiles": ["projects/sw-ui/package.json"],
+  "bumpFiles": ["projects/sw-ui/package.json"]
+}
