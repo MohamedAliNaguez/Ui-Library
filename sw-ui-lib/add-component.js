@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const srcPath = path.join(__dirname, 'src', 'lib');
-const modulePath = path.join(srcPath, 'module.ts');
+const modulePath = path.join(srcPath, 'sw-ui.module.ts');
 const publicApiPath = path.join(__dirname, 'src', 'public-api.ts');
 
 const getComponents = () => {
