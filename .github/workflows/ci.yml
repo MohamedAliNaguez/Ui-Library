@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
@@ -16,22 +16,22 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' 
-
-      - name: List files in root
-        run: ls -la
+          node-version: '20'
 
       - name: Install dependencies
         run: |
           cd sw-ui-lib
-          ls -la  # List files in sw-ui-lib to confirm location
           npm install
 
       - name: Export new components
         run: |
           cd sw-ui-lib
-          ls -la  # List files in sw-ui-lib again to confirm add-component.js is present
+          ls -la
           node add-component.js
+
+      - name: Install Angular CLI
+        run: |
+          npm install -g @angular/cli
 
       - name: Build library
         run: |
