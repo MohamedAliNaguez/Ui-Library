@@ -21,6 +21,7 @@ import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.co
 @NgModule({
   declarations: [
   
+  
 
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
@@ -38,6 +39,8 @@ import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.co
   Trynav22Component,
   NewnavComponent,
   NewbuttonComponent,
+  NouveaubuttonComponent
+,
   NouveaubuttonComponent
 ],
   imports: [
@@ -70,6 +73,7 @@ import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.co
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -85,10 +89,11 @@ import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.co
   SwStyledDropdownListComponent,
   TrynavComponent,
   Trynav22Component,
-  NewnavComponent
-,
+  NewnavComponent,
   NewbuttonComponent,
   NewnavComponent
+,
+  NouveaubuttonComponent
 ]
 })
 export class SwUiModule { }
