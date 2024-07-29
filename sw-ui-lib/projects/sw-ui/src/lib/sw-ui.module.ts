@@ -19,24 +19,7 @@ import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
 
 @NgModule({
   declarations: [
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
