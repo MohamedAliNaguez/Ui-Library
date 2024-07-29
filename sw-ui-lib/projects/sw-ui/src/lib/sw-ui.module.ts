@@ -13,11 +13,18 @@ import { TrybuttComponent } from '../public-api';
 import { TrynavComponent } from './navbars/trynav/trynav.component';
 import { Trynav22Component } from './navbars/trynav22/trynav22.component';
 import { NewnavComponent } from './navbars/newnav/newnav.component';
+import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
 
 
 
 @NgModule({
   declarations: [
+  
+  
+  
+  
+  
+  
   
   
   
@@ -44,20 +51,18 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
   SwPrimaryButtonComponent,
   TrynavComponent,
   Trynav22Component,
-  Trynav22Component,
-  NewnavComponent
-
-
-
-
-
-
-
-
+  NewnavComponent,
+  NewbuttonComponent
 ],
   imports: [
   ],
   exports: [
+  
+  
+  
+  
+  
+  
   
   
   
@@ -93,14 +98,7 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
   SwStyledDropdownListComponent,
   TrynavComponent,
   Trynav22Component,
-  Trynav22Component
-
-
-
-
-
-
-
+  NewnavComponent
 ]
 })
 export class SwUiModule { }
