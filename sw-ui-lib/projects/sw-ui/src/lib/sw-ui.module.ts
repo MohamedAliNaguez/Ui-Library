@@ -25,6 +25,7 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
   
   
   
+  
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -40,6 +41,7 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
   TrynavComponent,
   Trynav22Component,
   Trynav22Component
+
 
 
 
@@ -64,6 +66,7 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -80,6 +83,7 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
   TrynavComponent,
   Trynav22Component,
   Trynav22Component
+
 
 
 
