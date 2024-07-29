@@ -8,8 +8,6 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false,
-  "scripts": {
-    "release": "standard-version --infile CHANGELOG.md --first-release"
-  }
+  "sideEffects": false
+  
 }
