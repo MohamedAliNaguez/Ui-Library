@@ -15,6 +15,7 @@ import { Trynav22Component } from './navbars/trynav22/trynav22.component';
 import { NewnavComponent } from './navbars/newnav/newnav.component';
 import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
 import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.component';
+import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
 
 
 
@@ -41,7 +42,8 @@ import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.co
   NewbuttonComponent,
   NouveaubuttonComponent
 ,
-  NouveaubuttonComponent
+  NouveaubuttonComponent,
+  Newbutton1Component
 ],
   imports: [
   ],
