@@ -23,6 +23,7 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
   declarations: [
   
   
+  
 
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
@@ -40,9 +41,9 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
   Trynav22Component,
   NewnavComponent,
   NewbuttonComponent,
-  NouveaubuttonComponent
-,
   NouveaubuttonComponent,
+  Newbutton1Component
+,
   Newbutton1Component
 ],
   imports: [
@@ -76,6 +77,7 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -93,8 +95,9 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
   Trynav22Component,
   NewnavComponent,
   NewbuttonComponent,
-  NewnavComponent
+  NouveaubuttonComponent
 ,
+  Newbutton1Component,
   NouveaubuttonComponent
 ]
 })
