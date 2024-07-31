@@ -5,6 +5,7 @@ export * from './lib/buttons/nouveaubutton/nouveaubutton.component';
 export * from './lib/buttons/sw-primary-button/sw-primary-button.component';
 export * from './lib/buttons/sw-secondary-button/sw-secondary-button.component';
 export * from './lib/buttons/sw-success-button/sw-success-button.component';
+export * from './lib/buttons/testbutton/testbutton.component';
 export * from './lib/buttons/trybutt/trybutt.component';
 export * from './lib/drop-lists/sw-basic-dropdown-list/sw-basic-dropdown-list.component';
 export * from './lib/drop-lists/sw-icons-dropdown-list/sw-icons-dropdown-list.component';
