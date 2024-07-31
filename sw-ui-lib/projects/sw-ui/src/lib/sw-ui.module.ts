@@ -16,6 +16,7 @@ import { NewnavComponent } from './navbars/newnav/newnav.component';
 import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
 import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.component';
 import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
+import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 
 
 
@@ -44,7 +45,8 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
   NouveaubuttonComponent,
   Newbutton1Component
 ,
-  Newbutton1Component
+  Newbutton1Component,
+  TestbuttonComponent
 ],
   imports: [
   ],
