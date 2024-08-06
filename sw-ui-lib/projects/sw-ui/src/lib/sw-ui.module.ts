@@ -25,6 +25,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   
   
   
+  
 
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
@@ -43,10 +44,14 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewnavComponent,
   NewbuttonComponent,
   NouveaubuttonComponent,
-  Newbutton1Component
-,
   Newbutton1Component,
+<<<<<<< HEAD
   TestbuttonComponent,
+=======
+  TestbuttonComponent
+,
+  TestbuttonComponent
+>>>>>>> 3bbdda2195eec102e66a37d886252a19fe6011b1
 ],
   imports: [
   ],
@@ -80,6 +85,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -97,10 +103,11 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   Trynav22Component,
   NewnavComponent,
   NewbuttonComponent,
-  NouveaubuttonComponent
-,
+  NouveaubuttonComponent,
   Newbutton1Component,
   NouveaubuttonComponent
+,
+  TestbuttonComponent
 ]
 })
 export class SwUiModule { }
