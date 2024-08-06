@@ -46,7 +46,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   Newbutton1Component
 ,
   Newbutton1Component,
-  TestbuttonComponent
+  TestbuttonComponent,
 ],
   imports: [
   ],
