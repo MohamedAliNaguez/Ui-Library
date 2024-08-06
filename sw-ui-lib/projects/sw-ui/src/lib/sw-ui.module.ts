@@ -26,6 +26,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   
   
   
+  
 
     SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
@@ -45,13 +46,14 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
-<<<<<<< HEAD
+  <<<<<<< HEAD
   TestbuttonComponent,
-=======
-  TestbuttonComponent
-,
+  =======
+  TestbuttonComponent,
   TestbuttonComponent
 >>>>>>> 3bbdda2195eec102e66a37d886252a19fe6011b1
+,
+  TestbuttonComponent
 ],
   imports: [
   ],
@@ -86,6 +88,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -105,7 +108,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
-  NouveaubuttonComponent
+  TestbuttonComponent
 ,
   TestbuttonComponent
 ]
