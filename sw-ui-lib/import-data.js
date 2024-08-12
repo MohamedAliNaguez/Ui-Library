@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // MongoDB connection setup
-mongoose.connect('MONGO_STRING');
+mongoose.connect(MONGO_STRING);
 
 // Define Component Schema and Model
 const ComponentSchema = new mongoose.Schema({
