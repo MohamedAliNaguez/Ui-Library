@@ -23,7 +23,8 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
 
 
 @NgModule({
-  declarations: [  
+  declarations: [
+    
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -44,15 +45,17 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   Newbutton1Component,
   TestbuttonComponent,
   SwButComponent,
-  SwButComponent,
   ButbutComponent
 
 
 
+,
+  ButbutComponent
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -114,6 +117,8 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   SwButComponent,
   SwButComponent 
 
+,
+  ButbutComponent
 ]
 })
 export class SwUiModule { }
