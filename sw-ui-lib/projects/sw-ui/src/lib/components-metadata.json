@@ -1,4 +1,4 @@
-export const componentsMetadata = [
+[
   {
     "name": "lib-butbut",
     "selector": "lib-butbut",
@@ -151,4 +151,4 @@ export const componentsMetadata = [
     "path": "drop-lists/sw-styled-dropdown-list/sw-styled-dropdown-list.component.ts",
     "category": "drop-lists"
   }
-];
+]
