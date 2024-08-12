@@ -22,6 +22,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 
 @NgModule({
   declarations: [
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -40,11 +41,12 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
-  TestbuttonComponent,
+  TestbuttonComponent
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -95,9 +97,9 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
+  TestbuttonComponent,
   TestbuttonComponent
-,
-  TestbuttonComponent
+
 ]
 })
 export class SwUiModule { }
