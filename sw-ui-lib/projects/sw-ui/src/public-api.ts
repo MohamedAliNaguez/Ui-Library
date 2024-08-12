@@ -1,5 +1,3 @@
-import componentsMetadata from './lib/components-metadata.json';
-
 export * from './lib/buttons/newbutton/newbutton.component';
 export * from './lib/buttons/newbutton1/newbutton1.component';
 export * from './lib/buttons/nouveaubutton/nouveaubutton.component';
@@ -22,4 +20,3 @@ export * from './lib/sw-ui.component';
 export * from './lib/sw-ui.module';
 export * from './lib/sw-ui.service';
 export * from './lib/buttons/butbut/butbut.component';
-export { componentsMetadata };
