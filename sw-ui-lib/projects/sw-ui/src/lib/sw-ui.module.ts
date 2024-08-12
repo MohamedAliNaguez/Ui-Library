@@ -17,6 +17,7 @@ import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
 import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.component';
 import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
 import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
+import { SwButComponent } from './buttons/sw-but/sw-but.component';
 
 
 
@@ -44,7 +45,8 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NouveaubuttonComponent,
   Newbutton1Component,
   TestbuttonComponent,
-  TestbuttonComponent
+  TestbuttonComponent,
+  SwButComponent
 
 ],
   imports: [
