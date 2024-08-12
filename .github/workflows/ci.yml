@@ -29,10 +29,6 @@ jobs:
           ls -la
           node add-component.js
           node generate-metadata.js
-
-      - name: Import data to MongoDB 
-        run: |
-          cd sw-ui-lib
           node import-data.js
 
       - name: Install Angular CLI
