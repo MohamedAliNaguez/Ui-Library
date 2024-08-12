@@ -23,6 +23,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 @NgModule({
   declarations: [
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -42,10 +43,13 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NouveaubuttonComponent,
   Newbutton1Component,
   TestbuttonComponent
+,
+  TestbuttonComponent
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -99,6 +103,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   Newbutton1Component,
   TestbuttonComponent,
   TestbuttonComponent
+
 
 ]
 })
