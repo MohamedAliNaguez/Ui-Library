@@ -1,94 +1,11 @@
-<div class="container">
-  <h1> SW Component Library</h1>
-
-  <section class="category">
-    <h2>Buttons</h2>
-    <div class="components">
-      <div class="component-wrapper">
-        <lib-sw-primary-button></lib-sw-primary-button>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-primary-button&gt;&lt;/lib-sw-primary-button&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-primary-button&gt;&lt;/lib-sw-primary-button&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-secondary-button></lib-sw-secondary-button>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-secondary-button&gt;&lt;/lib-sw-secondary-button&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-secondary-button&gt;&lt;/lib-sw-secondary-button&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-success-button></lib-sw-success-button>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-success-button&gt;&lt;/lib-sw-success-button&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-success-button&gt;&lt;/lib-sw-success-button&gt;')">Copy</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Nav Bars</h2>
-    <div class="components">
-      <div class="component-wrapper">
-        <lib-sw-simple-navbar></lib-sw-simple-navbar>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-simple-navbar&gt;&lt;/lib-sw-simple-navbar&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-simple-navbar&gt;&lt;/lib-sw-simple-navbar&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-centred-navbar></lib-sw-centred-navbar>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-centred-navbar&gt;&lt;/lib-sw-centred-navbar&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-centred-navbar&gt;&lt;/lib-sw-centred-navbar&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-right-aligned-navbar></lib-sw-right-aligned-navbar>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-right-aligned-navbar&gt;&lt;/lib-sw-right-aligned-navbar&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-right-aligned-navbar&gt;&lt;/lib-sw-right-aligned-navbar&gt;')">Copy</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Dropdown Lists</h2>
-    <div class="components">
-      <div class="component-wrapper">
-        <lib-sw-basic-dropdown-list></lib-sw-basic-dropdown-list>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-basic-dropdown-list&gt;&lt;/lib-sw-basic-dropdown-list&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-basic-dropdown-list&gt;&lt;/lib-sw-basic-dropdown-list&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-styled-dropdown-list></lib-sw-styled-dropdown-list>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-styled-dropdown-list&gt;&lt;/lib-sw-styled-dropdown-list&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-styled-dropdown-list&gt;&lt;/lib-sw-styled-dropdown-list&gt;')">Copy</button>
-        </div>
-      </div>
-      <div class="component-wrapper">
-        <lib-sw-icons-dropdown-list></lib-sw-icons-dropdown-list>
-        <div class="selector-container">
-          <span class="selector">&lt;lib-sw-icons-dropdown-list&gt;&lt;/lib-sw-icons-dropdown-list&gt;</span>
-          <button class="copy-button" onclick="copyToClipboard('&lt;lib-sw-icons-dropdown-list&gt;&lt;/lib-sw-icons-dropdown-list&gt;')">Copy</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- app.component.html -->
+<div>
+  <h1>{{ title }}</h1>
+  <div *ngFor="let component of components">
+    <h2>{{ component.name }}</h2>
+    <p><strong>Description:</strong> {{ component.description }}</p>
+    <p><strong>Usage:</strong> <code>{{ component.usage }}</code></p>
+    <p><strong>Path:</strong> <code>{{ component.path }}</code></p>
+    <hr>
+  </div>
 </div>
-<lib-sw-basic-dropdown-list></lib-sw-basic-dropdown-list>
-<script>
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    alert('Copied to clipboard!');
-  }).catch(err => {
-    console.error('Could not copy text: ', err);
-  });
-}
-</script>
