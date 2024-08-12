@@ -1,6 +1,3 @@
-
-
-
 export * from './lib/buttons/newbutton/newbutton.component';
 export * from './lib/buttons/newbutton1/newbutton1.component';
 export * from './lib/buttons/nouveaubutton/nouveaubutton.component';
