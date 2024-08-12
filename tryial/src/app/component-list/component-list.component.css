@@ -1,0 +1,13 @@
+/* src/app/component-list/component-list.component.css */
+div {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #007bff;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  
