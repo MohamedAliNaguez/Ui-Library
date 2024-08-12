@@ -26,6 +26,7 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -45,13 +46,15 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   NouveaubuttonComponent,
   Newbutton1Component,
   TestbuttonComponent,
-  TestbuttonComponent,
   SwButComponent
 
+,
+  SwButComponent
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -110,6 +113,8 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
 
 
 
+,
+  SwButComponent
 ]
 })
 export class SwUiModule { }
