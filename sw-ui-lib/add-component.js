@@ -86,12 +86,26 @@ const updatePublicApiFile = (components) => {
   try {
     let publicApiContent = fs.readFileSync(publicApiPath, 'utf8');
 
-    const newExports = components.map(comp => `export * from '${comp.path}';`).join('\n');
+    // Create a set to track existing exports to avoid duplicates
+    const existingExports = new Set();
 
-    publicApiContent = publicApiContent.split('\n').filter(line => !line.startsWith('export * from')).join('\n');
+    // Capture all existing export lines
+    publicApiContent.split('\n').forEach(line => {
+      if (line.startsWith('export * from')) {
+        existingExports.add(line.trim());
+      }
+    });
 
-    publicApiContent += `\n${newExports}`;
+    // Generate new export lines for components
+    const newExportLines = components.map(comp => `export * from '${comp.path}';`);
 
+    // Add only new exports that are not already present
+    newExportLines.forEach(line => existingExports.add(line));
+
+    // Join all export lines back into the file content
+    publicApiContent = Array.from(existingExports).join('\n');
+
+    // Write back to the public API file
     fs.writeFileSync(publicApiPath, publicApiContent, 'utf8');
     console.log(`Updated public-api file: ${publicApiPath}`);
   } catch (error) {
