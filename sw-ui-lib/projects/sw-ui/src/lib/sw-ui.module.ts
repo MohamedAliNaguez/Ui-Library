@@ -28,6 +28,7 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -49,6 +50,7 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   TestbuttonComponent,
   SwButComponent,
   SwButComponent
+
 
 ],
   imports: [
@@ -90,6 +92,7 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -110,9 +113,9 @@ import { SwButComponent } from './buttons/sw-but/sw-but.component';
   NouveaubuttonComponent,
   Newbutton1Component,
   TestbuttonComponent,
+  SwButComponent,
   SwButComponent
-,
-  SwButComponent
+
 ]
 })
 export class SwUiModule { }
