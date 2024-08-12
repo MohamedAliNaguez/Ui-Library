@@ -22,13 +22,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 
 @NgModule({
   declarations: [
-  
-  
-  
-  
-  
-
-    SwPrimaryButtonComponent,
+  SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   TrybuttComponent,
@@ -46,14 +40,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
-  <<<<<<< HEAD
   TestbuttonComponent,
-  =======
-  TestbuttonComponent,
-  TestbuttonComponent
->>>>>>> 3bbdda2195eec102e66a37d886252a19fe6011b1
-,
-  TestbuttonComponent
 ],
   imports: [
   ],
