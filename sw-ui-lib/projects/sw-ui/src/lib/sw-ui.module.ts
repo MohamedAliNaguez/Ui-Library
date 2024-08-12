@@ -24,6 +24,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   declarations: [
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -42,13 +43,14 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   NewbuttonComponent,
   NouveaubuttonComponent,
   Newbutton1Component,
+  TestbuttonComponent,
   TestbuttonComponent
-,
-  TestbuttonComponent
+
 ],
   imports: [
   ],
   exports: [
+  
   
   
   
@@ -103,6 +105,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
   Newbutton1Component,
   TestbuttonComponent,
   TestbuttonComponent
+
 
 
 ]
