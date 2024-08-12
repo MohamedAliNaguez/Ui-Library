@@ -19,12 +19,12 @@ import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
 import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 import { SwButComponent } from './buttons/sw-but/sw-but.component';
 import { ButbutComponent } from './buttons/butbut/butbut.component';
-
+import {componentsMetadata} from './components-metadata'
 
 
 @NgModule({
   declarations: [
-    
+    componentsMetadata,
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -116,7 +116,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   TestbuttonComponent,
   SwButComponent,
   SwButComponent 
-
+,componentsMetadata
 ,
   ButbutComponent
 ]
