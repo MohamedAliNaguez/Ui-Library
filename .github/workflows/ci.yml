@@ -23,11 +23,17 @@ jobs:
           cd sw-ui-lib
           npm install
 
-      - name: Export new components
+      - name: Export new components & extract component meta data into JS
         run: |
           cd sw-ui-lib
           ls -la
           node add-component.js
+          node generate-metadata.js
+
+      - name: Import data to MongoDB 
+        run: |
+          cd sw-ui-lib
+          node import-data.js
 
       - name: Install Angular CLI
         run: |
