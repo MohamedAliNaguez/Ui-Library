@@ -28,6 +28,7 @@ function generateMetadata() {
           description: `A description for ${componentName}`,
           usage: `<${componentName}></${componentName}>`,
           path: componentPath,
+          categoty : componentPath.split('/')[0]
         });
       }
     });
