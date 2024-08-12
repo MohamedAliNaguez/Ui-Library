@@ -23,6 +23,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
 
 @NgModule({
   declarations: [
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -43,12 +44,9 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   Newbutton1Component,
   TestbuttonComponent,
   SwButComponent,
+  ButbutComponent,
   ButbutComponent
 
-
-
-,
-  ButbutComponent
 ],
   imports: [
   ],
@@ -92,6 +90,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -113,7 +112,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   Newbutton1Component,
   TestbuttonComponent,
   SwButComponent,
-  SwButComponent 
+  ButbutComponent
 ,
   ButbutComponent
 ]
