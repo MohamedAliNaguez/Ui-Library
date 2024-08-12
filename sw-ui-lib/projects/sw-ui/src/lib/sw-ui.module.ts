@@ -25,6 +25,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   declarations: [
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -47,6 +48,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   SwButComponent,
   ButbutComponent,
   ButbutComponent
+
 
 
 ],
@@ -94,6 +96,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -117,6 +120,7 @@ import { ButbutComponent } from './buttons/butbut/butbut.component';
   SwButComponent,
   ButbutComponent,
   ButbutComponent
+
 
 ]
 })

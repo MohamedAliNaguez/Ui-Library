@@ -1,6 +1,6 @@
 {
   "name": "dalynaguez-sw-ui",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
