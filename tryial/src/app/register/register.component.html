@@ -1,0 +1,30 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" />
+      <div *ngIf="registerForm.controls.name.invalid && registerForm.controls.name.touched">
+        <small *ngIf="registerForm.controls.name.errors?.required">Name is required.</small>
+      </div>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" />
+      <div *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched">
+        <small *ngIf="registerForm.controls.email.errors?.required">Email is required.</small>
+        <small *ngIf="registerForm.controls.email.errors?.email">Invalid email format.</small>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" />
+      <div *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched">
+        <small *ngIf="registerForm.controls.password.errors?.required">Password is required.</small>
+      </div>
+    </div>
+    <div>
+      <label for="password_confirmation">Confirm Password:</label>
+      <input id="password_confirmation" formControlName="password_confirmation" type="password" />
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  
