@@ -20,6 +20,7 @@ import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
 import { SwButComponent } from './buttons/sw-but/sw-but.component';
 import { ButbutComponent } from './buttons/butbut/butbut.component';
 import { Testnav2Component } from './navbars/testnav2/testnav2.component';
+import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { Testnav2Component } from './navbars/testnav2/testnav2.component';
   SwButComponent,
   ButbutComponent,
   Testnav2Component,
-  Testnav2Component
+  Testnav2Component,
+  NouveaubutComponent
 
 
 ],
