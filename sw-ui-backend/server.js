@@ -10,6 +10,7 @@ const mongoString = process.env.MONGO_STRING;
 
 if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.startsWith('mongodb+srv://'))) {
   console.error('Invalid MongoDB connection string');
+  console.log(mongoString);
   process.exit(1);
 }
 
