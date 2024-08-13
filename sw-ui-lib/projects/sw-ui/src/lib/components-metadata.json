@@ -24,14 +24,6 @@
     "category": "buttons"
   },
   {
-    "name": "lib-newnav",
-    "selector": "lib-newnav",
-    "description": "A description for lib-newnav",
-    "usage": "<lib-newnav></lib-newnav>",
-    "path": "navbars/newnav/newnav.component.ts",
-    "category": "navbars"
-  },
-  {
     "name": "lib-sw-centred-navbar",
     "selector": "lib-sw-centred-navbar",
     "description": "A description for lib-sw-centred-navbar",

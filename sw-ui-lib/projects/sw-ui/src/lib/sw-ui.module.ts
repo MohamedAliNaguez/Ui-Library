@@ -26,7 +26,6 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
 
 @NgModule({
   declarations: [
-  SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
@@ -36,12 +35,11 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
-  NewnavComponent
+  SwSecondaryButtonComponent
 ],
   imports: [
   ],
   exports: [
-  SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwUiComponent,
@@ -51,7 +49,7 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
-  NewnavComponent
+  SwCentredNavbarComponent
 ]
 })
 export class SwUiModule { }
