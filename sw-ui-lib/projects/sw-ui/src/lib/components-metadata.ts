@@ -1,61 +1,5 @@
 export const componentsMetadata = [
   {
-    "name": "lib-butbut",
-    "selector": "lib-butbut",
-    "description": "A description for lib-butbut",
-    "usage": "<lib-butbut></lib-butbut>",
-    "path": "buttons/butbut/butbut.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-butsspeeccc",
-    "selector": "lib-butsspeeccc",
-    "description": "A description for lib-butsspeeccc",
-    "usage": "<lib-butsspeeccc></lib-butsspeeccc>",
-    "path": "buttons/butsspeeccc/butsspeeccc.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-newbutton",
-    "selector": "lib-newbutton",
-    "description": "A description for lib-newbutton",
-    "usage": "<lib-newbutton></lib-newbutton>",
-    "path": "buttons/newbutton/newbutton.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-newbutton1",
-    "selector": "lib-newbutton1",
-    "description": "A description for lib-newbutton1",
-    "usage": "<lib-newbutton1></lib-newbutton1>",
-    "path": "buttons/newbutton1/newbutton1.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-nouveaubut",
-    "selector": "lib-nouveaubut",
-    "description": "A description for lib-nouveaubut",
-    "usage": "<lib-nouveaubut></lib-nouveaubut>",
-    "path": "buttons/nouveaubut/nouveaubut.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-nouveaubutton",
-    "selector": "lib-nouveaubutton",
-    "description": "A description for lib-nouveaubutton",
-    "usage": "<lib-nouveaubutton></lib-nouveaubutton>",
-    "path": "buttons/nouveaubutton/nouveaubutton.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-sw-but",
-    "selector": "lib-sw-but",
-    "description": "A description for lib-sw-but",
-    "usage": "<lib-sw-but></lib-sw-but>",
-    "path": "buttons/sw-but/sw-but.component.ts",
-    "category": "buttons"
-  },
-  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
@@ -77,22 +21,6 @@ export const componentsMetadata = [
     "description": "A description for lib-sw-success-button",
     "usage": "<lib-sw-success-button></lib-sw-success-button>",
     "path": "buttons/sw-success-button/sw-success-button.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-testbutton",
-    "selector": "lib-testbutton",
-    "description": "A description for lib-testbutton",
-    "usage": "<lib-testbutton></lib-testbutton>",
-    "path": "buttons/testbutton/testbutton.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-trybutt",
-    "selector": "lib-trybutt",
-    "description": "A description for lib-trybutt",
-    "usage": "<lib-trybutt></lib-trybutt>",
-    "path": "buttons/trybutt/trybutt.component.ts",
     "category": "buttons"
   },
   {
@@ -125,30 +53,6 @@ export const componentsMetadata = [
     "description": "A description for lib-sw-simple-navbar",
     "usage": "<lib-sw-simple-navbar></lib-sw-simple-navbar>",
     "path": "navbars/sw-simple-navbar/sw-simple-navbar.component.ts",
-    "category": "navbars"
-  },
-  {
-    "name": "lib-testnav2",
-    "selector": "lib-testnav2",
-    "description": "A description for lib-testnav2",
-    "usage": "<lib-testnav2></lib-testnav2>",
-    "path": "navbars/testnav2/testnav2.component.ts",
-    "category": "navbars"
-  },
-  {
-    "name": "lib-trynav",
-    "selector": "lib-trynav",
-    "description": "A description for lib-trynav",
-    "usage": "<lib-trynav></lib-trynav>",
-    "path": "navbars/trynav/trynav.component.ts",
-    "category": "navbars"
-  },
-  {
-    "name": "lib-trynav22",
-    "selector": "lib-trynav22",
-    "description": "A description for lib-trynav22",
-    "usage": "<lib-trynav22></lib-trynav22>",
-    "path": "navbars/trynav22/trynav22.component.ts",
     "category": "navbars"
   },
   {
