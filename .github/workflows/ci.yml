@@ -26,10 +26,18 @@ jobs:
       - name: Export new components & extract component meta data into JS
         run: |
           cd sw-ui-lib
-      - name:  extract component meta data into JS
+
+      - name: Extract component meta data into JS
         run: |
           cd sw-ui-lib
           node generate-metadata.js
+          
+      - name: Start Server
+        env:
+          MONGO_STRING: ${{ secrets.MONGO_STRING }}
+        run: |
+          cd sw-ui-backend
+          node server.js
            
       - name: Import meta-data to MongoDB
         env:
@@ -48,6 +56,8 @@ jobs:
           ng build
 
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -58,6 +68,8 @@ jobs:
           git push --follow-tags origin main  # make sure to push the tags
 
       - name: Login to npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
