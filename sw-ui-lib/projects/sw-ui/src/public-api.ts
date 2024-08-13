@@ -22,3 +22,4 @@ export * from './lib/sw-ui.service';
 export * from './lib/buttons/butbut/butbut.component';
 export * from './lib/navbars/testnav2/testnav2.component';
 export * from './lib/buttons/nouveaubut/nouveaubut.component';
+export * from './lib/buttons/butsspeeccc/butsspeeccc.component';

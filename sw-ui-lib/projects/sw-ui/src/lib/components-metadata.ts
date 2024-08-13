@@ -8,6 +8,14 @@ export const componentsMetadata = [
     "category": "buttons"
   },
   {
+    "name": "lib-butsspeeccc",
+    "selector": "lib-butsspeeccc",
+    "description": "A description for lib-butsspeeccc",
+    "usage": "<lib-butsspeeccc></lib-butsspeeccc>",
+    "path": "buttons/butsspeeccc/butsspeeccc.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-newbutton",
     "selector": "lib-newbutton",
     "description": "A description for lib-newbutton",

@@ -34,6 +34,7 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -57,9 +58,10 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   ButbutComponent,
   Testnav2Component,
   NouveaubutComponent,
-  NouveaubutComponent,
   ButsspeecccComponent
 
+,
+  ButsspeecccComponent
 ],
   imports: [
   ],
@@ -111,6 +113,7 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -134,9 +137,10 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwButComponent,
   ButbutComponent,
   Testnav2Component,
+  NouveaubutComponent,
   NouveaubutComponent
 ,
-  NouveaubutComponent
+  ButsspeecccComponent
 ]
 })
 export class SwUiModule { }
