@@ -112,6 +112,14 @@
     "category": "navbars"
   },
   {
+    "name": "lib-testnav2",
+    "selector": "lib-testnav2",
+    "description": "A description for lib-testnav2",
+    "usage": "<lib-testnav2></lib-testnav2>",
+    "path": "navbars/testnav2/testnav2.component.ts",
+    "category": "navbars"
+  },
+  {
     "name": "lib-trynav",
     "selector": "lib-trynav",
     "description": "A description for lib-trynav",
