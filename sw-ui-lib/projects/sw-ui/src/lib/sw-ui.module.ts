@@ -29,6 +29,7 @@ import { Testnav2Component } from './navbars/testnav2/testnav2.component';
   
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -52,6 +53,7 @@ import { Testnav2Component } from './navbars/testnav2/testnav2.component';
   ButbutComponent,
   Testnav2Component,
   Testnav2Component
+
 
 ],
   imports: [
@@ -101,6 +103,7 @@ import { Testnav2Component } from './navbars/testnav2/testnav2.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -123,9 +126,9 @@ import { Testnav2Component } from './navbars/testnav2/testnav2.component';
   TestbuttonComponent,
   SwButComponent,
   ButbutComponent,
+  Testnav2Component,
   Testnav2Component
-,
-  Testnav2Component
+
 ]
 })
 export class SwUiModule { }
