@@ -32,6 +32,7 @@ import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
   
   
   
+  
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -54,11 +55,9 @@ import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
   SwButComponent,
   ButbutComponent,
   Testnav2Component,
+  NouveaubutComponent,
   NouveaubutComponent
 
-
-,
-  NouveaubutComponent
 ],
   imports: [
   ],
@@ -109,6 +108,7 @@ import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
   
   
   
+  
 
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -132,8 +132,7 @@ import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
   SwButComponent,
   ButbutComponent,
   Testnav2Component,
-  Testnav2Component
-
+  NouveaubutComponent
 ,
   NouveaubutComponent
 ]
