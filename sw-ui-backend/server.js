@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // MongoDB connection setup
-mongoose.connect(MONGO_STRING);
+mongoose.connect('mongodb+srv://dalynaguez:8MP4N7S03knLVfsS@swlib.sf6hzyx.mongodb.net/');
 
 // Define Component Schema and Model
 const ComponentSchema = new mongoose.Schema({
