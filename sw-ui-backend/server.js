@@ -13,7 +13,7 @@ if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.start
   process.exit(1);
 }
 
-// MongoDB connection setup
+// MongoDB connection setup 
 mongoose.connect(mongoString)
   .then(() => {
     console.log('Connected to MongoDB');
