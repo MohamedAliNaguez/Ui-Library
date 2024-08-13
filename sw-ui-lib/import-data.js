@@ -2,8 +2,23 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
 
+// Access the MongoDB URI from environment variables
+const mongoString = process.env.MONGO_STRING;
+
+if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.startsWith('mongodb+srv://'))) {
+  console.error('Invalid MongoDB connection string');
+  process.exit(1);
+}
+
 // MongoDB connection setup
-mongoose.connect(MONGO_STRING);
+mongoose.connect(mongoString, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(err => {
+    console.error('Error connecting to MongoDB:', err);
+    process.exit(1);
+  });
 
 // Define Component Schema and Model
 const ComponentSchema = new mongoose.Schema({
