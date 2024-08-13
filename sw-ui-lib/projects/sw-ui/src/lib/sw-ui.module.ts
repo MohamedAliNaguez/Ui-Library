@@ -26,19 +26,8 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
 
 @NgModule({
   declarations: [
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
-  TrybuttComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
@@ -47,75 +36,11 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
-  TrynavComponent,
-  Trynav22Component,
-  NewnavComponent,
-  NewbuttonComponent,
-  NouveaubuttonComponent,
-  Newbutton1Component,
-  TestbuttonComponent,
-  SwButComponent,
-  ButbutComponent,
-  Testnav2Component,
-  NouveaubutComponent,
-  ButsspeecccComponent
-
-,
-  ButsspeecccComponent
+  NewnavComponent
 ],
   imports: [
   ],
   exports: [
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
@@ -123,24 +48,10 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
-  TrybuttComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
-  TrynavComponent,
-  Trynav22Component,
-  NewnavComponent,
-  NewbuttonComponent,
-  NouveaubuttonComponent,
-  Newbutton1Component,
-  TestbuttonComponent,
-  SwButComponent,
-  ButbutComponent,
-  Testnav2Component,
-  NouveaubutComponent,
-  NouveaubutComponent
-,
-  ButsspeecccComponent
+  NewnavComponent
 ]
 })
 export class SwUiModule { }
