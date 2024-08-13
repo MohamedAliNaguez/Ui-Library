@@ -38,7 +38,7 @@ jobs:
         run: |
           cd sw-ui-backend
           nohup node server.js &
-           
+
       - name: Import meta-data to MongoDB
         env:
           MONGO_STRING: ${{ secrets.MONGO_STRING }}
@@ -59,16 +59,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          cd sw-ui-lib/projects/sw-ui
-          cd ../..
+          cd sw-ui-lib
           git add .
           # Check if there are changes to commit
           if git diff-index --quiet HEAD --; then
-          echo "No changes to commit."
+            echo "No changes to commit."
           else
-          git commit -m "New Component added"
-          git push --follow-tags origin main
+            git commit -m "New Component added"
+            git push --follow-tags origin main
           fi
 
       - name: Login to npm
