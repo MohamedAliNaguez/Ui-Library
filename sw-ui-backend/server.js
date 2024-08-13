@@ -14,7 +14,7 @@ if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.start
 }
 
 // MongoDB connection setup
-mongoose.connect(mongoString, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoString)
   .then(() => {
     console.log('Connected to MongoDB');
   })
