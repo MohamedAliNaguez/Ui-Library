@@ -26,6 +26,7 @@ jobs:
       - name: Export new components & extract component meta data into JS
         run: |
           cd sw-ui-lib
+          node add-component.js
 
       - name: Extract component meta data into JS
         run: |
