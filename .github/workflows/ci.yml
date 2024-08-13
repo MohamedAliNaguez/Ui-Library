@@ -32,6 +32,8 @@ jobs:
           node generate-metadata.js
            
       - name: Import meta-data to MongoDB
+        env:
+          MONGO_STRING: ${{ secrets.MONGO_STRING }}
         run: |
           cd sw-ui-lib
           node import-data.js
