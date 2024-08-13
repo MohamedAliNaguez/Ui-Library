@@ -49,29 +49,33 @@ const updateModuleFile = (components) => {
     const declarationPattern = /declarations:\s*\[(.*?)\]/s;
     const exportPattern = /exports:\s*\[(.*?)\]/s;
 
-    const updatedDeclarations = components.map(comp => comp.name).join(',\n  ');
-    const updatedExports = components.map(comp => comp.name).join(',\n  ');
+    const newDeclarations = components.map(comp => comp.name);
+    const newExports = components.map(comp => comp.name);
 
     let updatedContent = moduleContent;
 
+    // Update declarations
     if (declarationPattern.test(moduleContent)) {
       updatedContent = updatedContent.replace(declarationPattern, (match, p1) => {
         const currentDeclarations = p1.split(/\s*,\s*/).filter(Boolean);
-        const newDeclarations = [...new Set([...currentDeclarations, ...components.map(comp => comp.name)])];
-        return `declarations: [\n  ${newDeclarations.join(',\n  ')}\n]`;
+        const updatedDeclarations = currentDeclarations.filter(declaration => newDeclarations.includes(declaration))
+                                                        .concat(newDeclarations);
+        return `declarations: [\n  ${[...new Set(updatedDeclarations)].join(',\n  ')}\n]`;
       });
     } else {
-      updatedContent = updatedContent.replace(/(@NgModule\s*\(\{)/, `$1\n  declarations: [\n  ${updatedDeclarations}\n],`);
+      updatedContent = updatedContent.replace(/(@NgModule\s*\(\{)/, `$1\n  declarations: [\n  ${newDeclarations.join(',\n  ')}\n],`);
     }
 
+    // Update exports
     if (exportPattern.test(moduleContent)) {
       updatedContent = updatedContent.replace(exportPattern, (match, p1) => {
         const currentExports = p1.split(/\s*,\s*/).filter(Boolean);
-        const newExports = [...new Set([...currentExports, ...components.map(comp => comp.name)])];
-        return `exports: [\n  ${newExports.join(',\n  ')}\n]`;
+        const updatedExports = currentExports.filter(exp => newExports.includes(exp))
+                                               .concat(newExports);
+        return `exports: [\n  ${[...new Set(updatedExports)].join(',\n  ')}\n]`;
       });
     } else {
-      updatedContent = updatedContent.replace(/(@NgModule\s*\(\{)/, `$1\n  exports: [\n  ${updatedExports}\n],`);
+      updatedContent = updatedContent.replace(/(@NgModule\s*\(\{)/, `$1\n  exports: [\n  ${newExports.join(',\n  ')}\n],`);
     }
 
     fs.writeFileSync(modulePath, updatedContent, 'utf8');
@@ -102,8 +106,14 @@ const updatePublicApiFile = (components) => {
     // Add only new exports that are not already present
     newExportLines.forEach(line => existingExports.add(line));
 
-    // Join all export lines back into the file content
-    publicApiContent = Array.from(existingExports).join('\n');
+    // Create a set of existing paths for quick lookup
+    const existingPaths = new Set(components.map(comp => comp.path));
+
+    // Remove lines for paths that no longer exist
+    publicApiContent = Array.from(existingExports).filter(line => {
+      const pathMatch = line.match(/'([^']+)'/);
+      return pathMatch && existingPaths.has(pathMatch[1]);
+    }).join('\n');
 
     // Write back to the public API file
     fs.writeFileSync(publicApiPath, publicApiContent, 'utf8');
