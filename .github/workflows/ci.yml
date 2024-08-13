@@ -37,7 +37,7 @@ jobs:
           MONGO_STRING: ${{ secrets.MONGO_STRING }}
         run: |
           cd sw-ui-backend
-          node server.js
+          nohup node server.js &
            
       - name: Import meta-data to MongoDB
         env:
