@@ -1,5 +1,13 @@
 [
   {
+    "name": "lib-newbutoutnttt",
+    "selector": "lib-newbutoutnttt",
+    "description": "A description for lib-newbutoutnttt",
+    "usage": "<lib-newbutoutnttt></lib-newbutoutnttt>",
+    "path": "buttons/newbutoutnttt/newbutoutnttt.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
