@@ -1,11 +1,27 @@
-<div>
-  <h1>{{ title }}</h1>
-  <div *ngFor="let component of components">
-    <h2>{{ component.name }}</h2>
-    <p><strong>Category:</strong> {{ component.category }}</p>
-    <p><strong>Description:</strong> {{ component.description }}</p>
-    <pre><strong>Usage:</strong> {{ component.usage }}</pre>
-    <p><strong>Path:</strong> <code>{{ component.path }}</code></p>
-    <hr>
+<div class="container">
+  <h1 class="title">{{ title }}</h1>
+
+  <div class="category-container">
+    <ng-container *ngFor="let category of categories">
+      <div class="category-card">
+        <h2 class="category-title">{{ category }}</h2>
+        <div class="card-container">
+          <ng-container *ngIf="filteredComponents[category]?.length">
+            <div class="card">
+              <h3 class="card-title">{{ filteredComponents[category][currentComponentIndex[category]]?.name }}</h3>
+              <p><strong>Category:</strong> {{ filteredComponents[category][currentComponentIndex[category]]?.category }}</p>
+              <p><strong>name:</strong> {{ filteredComponents[category][currentComponentIndex[category]]?.name }}</p>
+              <pre><strong>Preview:</strong></pre>
+              <div class="usage" [innerHTML]="sanitizeUsage(filteredComponents[category][currentComponentIndex[category]]?.usage)"></div>
+              <p><strong>Usage:</strong> <code>{{ filteredComponents[category][currentComponentIndex[category]]?.usage }}</code></p>
+            </div>
+          </ng-container>
+        </div>
+        <div class="pagination-controls">
+          <button (click)="prevPage(category)">&#8592; Previous</button>
+          <button (click)="nextPage(category)">Next &#8594;</button>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
