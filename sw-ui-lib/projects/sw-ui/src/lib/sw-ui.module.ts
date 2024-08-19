@@ -14,7 +14,6 @@ import { SwIconsDropdownListComponent } from './drop-lists/sw-icons-dropdown-lis
 
 @NgModule({
   declarations: [
-  SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
@@ -22,14 +21,13 @@ import { SwIconsDropdownListComponent } from './drop-lists/sw-icons-dropdown-lis
   SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
-  NewbuttonComponent,
   SwSecondaryButtonComponent,
-  SwSuccessButtonComponent
+  SwSuccessButtonComponent,
+  SwBasicDropdownListComponent
 ],
   imports: [
   ],
   exports: [
-  SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
@@ -37,9 +35,9 @@ import { SwIconsDropdownListComponent } from './drop-lists/sw-icons-dropdown-lis
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
-  NewbuttonComponent,
   SwCentredNavbarComponent,
-  SwRightAlignedNavbarComponent
+  SwRightAlignedNavbarComponent,
+  SwSimpleNavbarComponent
 ]
 })
 export class SwUiModule { }

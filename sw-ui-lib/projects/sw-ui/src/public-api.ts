@@ -8,4 +8,3 @@ export * from './lib/navbars/sw-centred-navbar/sw-centred-navbar.component';
 export * from './lib/navbars/sw-right-aligned-navbar/sw-right-aligned-navbar.component';
 export * from './lib/navbars/sw-simple-navbar/sw-simple-navbar.component';
 export * from './lib/sw-ui.component';
-export * from './lib/buttons/newbutton/newbutton.component';
