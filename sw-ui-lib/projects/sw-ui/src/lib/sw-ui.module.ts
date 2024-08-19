@@ -36,7 +36,8 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
-  NewnavComponent
+  NewnavComponent,
+  NewbuttonComponent
 ],
   imports: [
   ],
