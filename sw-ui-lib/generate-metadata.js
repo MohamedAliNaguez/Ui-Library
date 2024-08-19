@@ -3,7 +3,7 @@ const path = require('path');
 const glob = require('glob');
 
 // Directories containing the components
-const componentDirs = ['buttons', 'navbars', 'drop-lists'];
+const componentDirs = ['buttons', 'navbars', 'drop-lists','forms','modals'];
 // Path to the library source
 const libPath = path.join(__dirname, 'projects', 'sw-ui', 'src', 'lib');
 // Path where the TypeScript metadata file will be saved
