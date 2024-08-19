@@ -1,5 +1,13 @@
 export const componentsMetadata = [
   {
+    "name": "lib-newbutton",
+    "selector": "lib-newbutton",
+    "description": "A description for lib-newbutton",
+    "usage": "<lib-newbutton></lib-newbutton>",
+    "path": "buttons/newbutton/newbutton.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
