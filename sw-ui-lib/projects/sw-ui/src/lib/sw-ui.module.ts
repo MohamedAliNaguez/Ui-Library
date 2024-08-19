@@ -15,12 +15,12 @@ import { SwSelectDropdownComponentComponent } from './forms/sw-select-dropdown-c
 import { SwBasicModalComponentComponent } from './modals/sw-basic-modal-component/sw-basic-modal-component.component';
 import { SwConfirmationDialogComponentComponent } from './modals/sw-confirmation-dialog-component/sw-confirmation-dialog-component.component';
 import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw-alert-box-component.component';
+import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.component';
 
 
 
 @NgModule({
   declarations: [
-  SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwUiComponent,
@@ -35,12 +35,13 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
   SwBasicModalComponentComponent,
   SwConfirmationDialogComponentComponent,
   SwStyledDropdownListComponent,
-  SwAlertBoxComponentComponent
+  SwAlertBoxComponentComponent,
+  SwCentredNavbarComponent,
+  NewbutoutntttComponent
 ],
   imports: [
   ],
   exports: [
-  SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
@@ -55,6 +56,7 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
   SwAlertBoxComponentComponent,
   SwBasicModalComponentComponent,
   SwConfirmationDialogComponentComponent,
+  SwSecondaryButtonComponent,
   SwUiComponent
 ]
 })
