@@ -15,4 +15,3 @@ export * from './lib/modals/sw-alert-box-component/sw-alert-box-component.compon
 export * from './lib/modals/sw-basic-modal-component/sw-basic-modal-component.component';
 export * from './lib/modals/sw-confirmation-dialog-component/sw-confirmation-dialog-component.component';
 export * from './lib/buttons/newbutoutnttt/newbutoutnttt.component';
-export * from './lib/sw-ui.module';
