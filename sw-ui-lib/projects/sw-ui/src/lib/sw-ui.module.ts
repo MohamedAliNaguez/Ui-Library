@@ -21,7 +21,6 @@ import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.co
 
 @NgModule({
   declarations: [
-  SwPrimaryButtonComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
@@ -37,12 +36,12 @@ import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.co
   NewbutoutntttComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
+  SwPrimaryButtonComponent,
   SwUiComponent
 ],
   imports: [
   ],
   exports: [
-  SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
@@ -58,6 +57,7 @@ import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.co
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
+  SwStyledDropdownListComponent,
   SwUiComponent
 ]
 })
