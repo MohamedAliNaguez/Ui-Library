@@ -1,0 +1,8 @@
+<div class="dialog-overlay" *ngIf="isVisible">
+    <div class="dialog-content">
+      <p>{{ message }}</p>
+      <button class="confirm-button" (click)="confirm()">Confirm</button>
+      <button class="cancel-button" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+  
