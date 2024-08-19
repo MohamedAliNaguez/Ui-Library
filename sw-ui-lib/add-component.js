@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const semver = require('semver'); // Import the semver library for version management
+const semver = require('semver');
 
 // Paths to relevant files
 const srcPath = path.join(__dirname, 'projects', 'sw-ui', 'src', 'lib');
@@ -11,11 +11,11 @@ const packageJsonPath = path.join(__dirname, 'projects', 'sw-ui', 'package.json'
 // Convert file name to PascalCase
 const toPascalCase = (fileName) => {
   return fileName
-    .replace(/\.component\.ts$/, '')          // Remove .component.ts
-    .replace(/[-_]/g, ' ')                    // Replace dashes and underscores with spaces
-    .split(' ')                               // Split into words
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) // Capitalize each word
-    .join('');                                // Join back into a single string
+    .replace(/\.component\.ts$/, '')
+    .replace(/[-_]/g, ' ')
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
 };
 
 // Get all component files from the specified directory
@@ -59,7 +59,7 @@ const updateModuleFile = (components) => {
       updatedContent = updatedContent.replace(declarationPattern, (match, p1) => {
         const currentDeclarations = p1.split(/\s*,\s*/).filter(Boolean);
         const updatedDeclarations = currentDeclarations.filter(declaration => newDeclarations.includes(declaration))
-                                                        .concat(newDeclarations);
+          .concat(newDeclarations);
         return `declarations: [\n  ${[...new Set(updatedDeclarations)].join(',\n  ')}\n]`;
       });
     } else {
@@ -71,7 +71,7 @@ const updateModuleFile = (components) => {
       updatedContent = updatedContent.replace(exportPattern, (match, p1) => {
         const currentExports = p1.split(/\s*,\s*/).filter(Boolean);
         const updatedExports = currentExports.filter(exp => newExports.includes(exp))
-                                               .concat(newExports);
+          .concat(newExports);
         return `exports: [\n  ${[...new Set(updatedExports)].join(',\n  ')}\n]`;
       });
     } else {
@@ -100,6 +100,9 @@ const updatePublicApiFile = (components) => {
       }
     });
 
+    // Ensure `export * from './lib/sw-ui.module';` is not removed
+    existingExports.add("export * from './lib/sw-ui.module';");
+
     // Generate new export lines for components
     const newExportLines = components.map(comp => `export * from '${comp.path}';`);
 
@@ -112,7 +115,7 @@ const updatePublicApiFile = (components) => {
     // Remove lines for paths that no longer exist
     publicApiContent = Array.from(existingExports).filter(line => {
       const pathMatch = line.match(/'([^']+)'/);
-      return pathMatch && existingPaths.has(pathMatch[1]);
+      return pathMatch && (pathMatch[1] === './lib/sw-ui.module' || existingPaths.has(pathMatch[1]));
     }).join('\n');
 
     // Write back to the public API file
