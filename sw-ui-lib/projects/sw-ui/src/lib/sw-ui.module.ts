@@ -9,24 +9,11 @@ import { SwRightAlignedNavbarComponent } from './navbars/sw-right-aligned-navbar
 import { SwBasicDropdownListComponent } from './drop-lists/sw-basic-dropdown-list/sw-basic-dropdown-list.component';
 import { SwStyledDropdownListComponent } from './drop-lists/sw-styled-dropdown-list/sw-styled-dropdown-list.component';
 import { SwIconsDropdownListComponent } from './drop-lists/sw-icons-dropdown-list/sw-icons-dropdown-list.component';
-import { TrybuttComponent } from '../public-api';
-import { TrynavComponent } from './navbars/trynav/trynav.component';
-import { Trynav22Component } from './navbars/trynav22/trynav22.component';
-import { NewnavComponent } from './navbars/newnav/newnav.component';
-import { NewbuttonComponent } from './buttons/newbutton/newbutton.component';
-import { NouveaubuttonComponent } from './buttons/nouveaubutton/nouveaubutton.component';
-import { Newbutton1Component } from './buttons/newbutton1/newbutton1.component';
-import { TestbuttonComponent } from './buttons/testbutton/testbutton.component';
-import { SwButComponent } from './buttons/sw-but/sw-but.component';
-import { ButbutComponent } from './buttons/butbut/butbut.component';
-import { Testnav2Component } from './navbars/testnav2/testnav2.component';
-import { NouveaubutComponent } from './buttons/nouveaubut/nouveaubut.component';
-import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.component';
+
 
 
 @NgModule({
   declarations: [
-  SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
@@ -36,13 +23,11 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwSimpleNavbarComponent,
   SwUiComponent,
   SwPrimaryButtonComponent,
-  NewnavComponent,
-  NewbuttonComponent
+  SwSecondaryButtonComponent
 ],
   imports: [
   ],
   exports: [
-  SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwUiComponent,
@@ -52,7 +37,7 @@ import { ButsspeecccComponent } from './buttons/butsspeeccc/butsspeeccc.componen
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
-  NewnavComponent
+  SwCentredNavbarComponent
 ]
 })
 export class SwUiModule { }
