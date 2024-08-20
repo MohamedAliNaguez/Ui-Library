@@ -23,7 +23,6 @@ import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.co
 
 @NgModule({
   declarations: [
-  SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwInputFieldComponentComponent,
@@ -41,12 +40,12 @@ import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.co
   SwUiComponent,
   NewbnewbuttonComponent,
   SwSecondaryButtonComponent,
-  Nuveaubutton1Component
+  Nuveaubutton1Component,
+  SwSuccessButtonComponent
 ],
   imports: [
   ],
   exports: [
-  SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
   SwInputFieldComponentComponent,
@@ -63,6 +62,8 @@ import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.co
   SwStyledDropdownListComponent,
   NewbnewbuttonComponent,
   SwCentredNavbarComponent,
+  Nuveaubutton1Component,
+  SwRightAlignedNavbarComponent,
   SwUiComponent
 ]
 })
