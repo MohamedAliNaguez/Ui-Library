@@ -17,6 +17,7 @@ import { SwConfirmationDialogComponentComponent } from './modals/sw-confirmation
 import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw-alert-box-component.component';
 import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.component';
 import { NewbnewbuttonComponent } from './buttons/newbnewbutton/newbnewbutton.component';
+import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.component';
 
 
 
@@ -39,7 +40,8 @@ import { NewbnewbuttonComponent } from './buttons/newbnewbutton/newbnewbutton.co
   SwPrimaryButtonComponent,
   SwUiComponent,
   NewbnewbuttonComponent,
-  SwSecondaryButtonComponent
+  SwSecondaryButtonComponent,
+  Nuveaubutton1Component
 ],
   imports: [
   ],
