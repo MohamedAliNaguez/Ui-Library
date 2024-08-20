@@ -60,12 +60,13 @@ app.get('/api/preview/:componentId', async (req, res) => {
       // Create a basic HTML document containing the usage field
       const htmlContent = `
       
-        <div>
+      
           ${component.usage}
-        </div>
+      
        
       `;
       res.send(htmlContent);
+      console.log(htmlContent);
     } else {
       res.status(404).send('Component not found');
     }
