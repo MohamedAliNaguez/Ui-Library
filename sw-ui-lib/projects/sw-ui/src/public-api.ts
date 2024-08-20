@@ -14,7 +14,4 @@ export * from './lib/forms/sw-text-area-component/sw-text-area-component.compone
 export * from './lib/modals/sw-alert-box-component/sw-alert-box-component.component';
 export * from './lib/modals/sw-basic-modal-component/sw-basic-modal-component.component';
 export * from './lib/modals/sw-confirmation-dialog-component/sw-confirmation-dialog-component.component';
-export * from './lib/buttons/newbutoutnttt/newbutoutnttt.component';
 export * from './lib/sw-ui.module';
-export * from './lib/buttons/newbnewbutton/newbnewbutton.component';
-export * from './lib/buttons/nuveaubutton1/nuveaubutton1.component';

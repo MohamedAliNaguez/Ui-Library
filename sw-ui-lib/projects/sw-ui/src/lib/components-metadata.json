@@ -1,29 +1,5 @@
 [
   {
-    "name": "lib-newbnewbutton",
-    "selector": "lib-newbnewbutton",
-    "description": "A description for lib-newbnewbutton",
-    "usage": "<lib-newbnewbutton></lib-newbnewbutton>",
-    "path": "buttons/newbnewbutton/newbnewbutton.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-newbutoutnttt",
-    "selector": "lib-newbutoutnttt",
-    "description": "A description for lib-newbutoutnttt",
-    "usage": "<lib-newbutoutnttt></lib-newbutoutnttt>",
-    "path": "buttons/newbutoutnttt/newbutoutnttt.component.ts",
-    "category": "buttons"
-  },
-  {
-    "name": "lib-nuveaubutton1",
-    "selector": "lib-nuveaubutton1",
-    "description": "A description for lib-nuveaubutton1",
-    "usage": "<lib-nuveaubutton1></lib-nuveaubutton1>",
-    "path": "buttons/nuveaubutton1/nuveaubutton1.component.ts",
-    "category": "buttons"
-  },
-  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
