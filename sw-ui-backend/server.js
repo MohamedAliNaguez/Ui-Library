@@ -59,20 +59,11 @@ app.get('/api/preview/:componentId', async (req, res) => {
     if (component) {
       // Create a basic HTML document containing the usage field
       const htmlContent = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>${component.name}</title>
-          <style>
-            /* Add any necessary styles here */
-          </style>
-        </head>
-        <body>
+      
+        <div>
           ${component.usage}
-        </body>
-        </html>
+        </div>
+       
       `;
       res.send(htmlContent);
     } else {
