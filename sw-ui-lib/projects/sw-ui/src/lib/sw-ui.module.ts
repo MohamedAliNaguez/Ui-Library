@@ -15,9 +15,7 @@ import { SwSelectDropdownComponentComponent } from './forms/sw-select-dropdown-c
 import { SwBasicModalComponentComponent } from './modals/sw-basic-modal-component/sw-basic-modal-component.component';
 import { SwConfirmationDialogComponentComponent } from './modals/sw-confirmation-dialog-component/sw-confirmation-dialog-component.component';
 import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw-alert-box-component.component';
-import { NewbutoutntttComponent } from './buttons/newbutoutnttt/newbutoutnttt.component';
-import { NewbnewbuttonComponent } from './buttons/newbnewbutton/newbnewbutton.component';
-import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.component';
+
 
 
 
@@ -33,14 +31,12 @@ import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.co
   SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
   SwCentredNavbarComponent,
-  NewbutoutntttComponent,
+  
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
   SwUiComponent,
-  NewbnewbuttonComponent,
   SwSecondaryButtonComponent,
-  Nuveaubutton1Component,
   SwSuccessButtonComponent
 ],
   imports: [
@@ -55,14 +51,11 @@ import { Nuveaubutton1Component } from './buttons/nuveaubutton1/nuveaubutton1.co
   SwBasicModalComponentComponent,
   SwConfirmationDialogComponentComponent,
   SwSecondaryButtonComponent,
-  NewbutoutntttComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwStyledDropdownListComponent,
-  NewbnewbuttonComponent,
   SwCentredNavbarComponent,
-  Nuveaubutton1Component,
   SwRightAlignedNavbarComponent,
   SwUiComponent
 ]
