@@ -21,7 +21,6 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
 
 @NgModule({
   declarations: [
-  SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwInputFieldComponentComponent,
   SwTextAreaComponentComponent,
@@ -31,18 +30,17 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
   SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
   SwCentredNavbarComponent,
-  
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
   SwUiComponent,
   SwSecondaryButtonComponent,
-  SwSuccessButtonComponent
+  SwSuccessButtonComponent,
+  SwBasicDropdownListComponent
 ],
   imports: [
   ],
   exports: [
-  SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
   SwInputFieldComponentComponent,
   SwSelectDropdownComponentComponent,
@@ -57,6 +55,7 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
   SwStyledDropdownListComponent,
   SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
+  SwSimpleNavbarComponent,
   SwUiComponent
 ]
 })
