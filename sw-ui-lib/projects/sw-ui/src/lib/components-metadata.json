@@ -16,6 +16,14 @@
     "category": "buttons"
   },
   {
+    "name": "lib-nuveaubutton1",
+    "selector": "lib-nuveaubutton1",
+    "description": "A description for lib-nuveaubutton1",
+    "usage": "<lib-nuveaubutton1></lib-nuveaubutton1>",
+    "path": "buttons/nuveaubutton1/nuveaubutton1.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",

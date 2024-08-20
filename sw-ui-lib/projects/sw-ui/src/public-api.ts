@@ -17,3 +17,4 @@ export * from './lib/modals/sw-confirmation-dialog-component/sw-confirmation-dia
 export * from './lib/buttons/newbutoutnttt/newbutoutnttt.component';
 export * from './lib/sw-ui.module';
 export * from './lib/buttons/newbnewbutton/newbnewbutton.component';
+export * from './lib/buttons/nuveaubutton1/nuveaubutton1.component';
