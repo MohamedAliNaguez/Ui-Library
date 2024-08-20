@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentService } from './component.service';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { interval } from 'rxjs';
 
 @Component({
@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   categories: string[] = [];
   currentComponentIndex: { [category: string]: number } = {};
   pageSize = 1; // Number of components per page
+  iframeSrc: { [category: string]: SafeResourceUrl } = {}; // Map to hold iframe sources
 
   constructor(private componentService: ComponentService, private sanitizer: DomSanitizer) {}
 
@@ -28,13 +29,14 @@ export class AppComponent implements OnInit {
     });
   }
 
-  sanitizeUsage(usage: string): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(usage);
+  sanitizeUsage(usage: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(usage);
   }
 
   filterComponentsByCategory(): void {
     this.categories.forEach(category => {
       this.filteredComponents[category] = this.components.filter((component: any) => component.category === category);
+      this.updateIframeSrc(category); // Update iframe src when components are filtered
     });
   }
 
@@ -44,10 +46,20 @@ export class AppComponent implements OnInit {
     });
   }
 
+  updateIframeSrc(category: string): void {
+    const componentId = this.filteredComponents[category]?.[this.currentComponentIndex[category]]?.id;
+    if (componentId) {
+      this.componentService.getComponentHtml(componentId).subscribe(html => {
+        this.iframeSrc[category] = this.sanitizeUsage(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`);
+      });
+    }
+  }
+
   prevPage(category: string): void {
     if (this.currentComponentIndex[category] > 0) {
       this.currentComponentIndex[category]--;
     }
+    this.updateIframeSrc(category); // Update iframe src on page change
   }
 
   nextPage(category: string): void {
@@ -56,6 +68,7 @@ export class AppComponent implements OnInit {
     } else if (this.filteredComponents[category]) {
       this.currentComponentIndex[category] = 0; // Loop back to the first component
     }
+    this.updateIframeSrc(category); // Update iframe src on page change
   }
 
   autoSwipe(): void {

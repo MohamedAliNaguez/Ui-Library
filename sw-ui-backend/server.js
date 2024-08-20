@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // Import cors package
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
@@ -45,6 +45,39 @@ app.get('/api/components', async (req, res) => {
   try {
     const components = await Component.find({});
     res.json(components);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// New route to serve HTML content
+app.get('/api/preview/:componentId', async (req, res) => {
+  const componentId = req.params.componentId;
+
+  try {
+    const component = await Component.findById(componentId);
+    if (component) {
+      // Create a basic HTML document containing the usage field
+      const htmlContent = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>${component.name}</title>
+          <style>
+            /* Add any necessary styles here */
+          </style>
+        </head>
+        <body>
+          ${component.usage}
+        </body>
+        </html>
+      `;
+      res.send(htmlContent);
+    } else {
+      res.status(404).send('Component not found');
+    }
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
