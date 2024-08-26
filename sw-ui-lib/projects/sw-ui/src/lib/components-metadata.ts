@@ -4,7 +4,7 @@ export const componentsMetadata = [
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
     "usage": "<lib-sw-primary-button></lib-sw-primary-button>",
-    "code": "<button class=\"btn btn-primary\"> Primary Button </button>\n",
+    "code": "<style>\n    .btn {\n      padding: 10px 20px;\n      font-size: 16px;\n      border-radius: 5px;\n      border: none;\n      cursor: pointer;\n    }\n  \n    .btn-primary {\n      background-color: #007bff;\n      color: white;\n    }\n  </style>\n  \n  <button class=\"btn btn-primary\"> Primary Button </button>\n  ",
     "path": "buttons/sw-primary-button/sw-primary-button.component.ts",
     "category": "buttons"
   },
