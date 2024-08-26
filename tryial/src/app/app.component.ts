@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   filteredComponents: { [category: string]: any[] } = {};
   categories: string[] = [];
   currentComponentIndex: { [category: string]: number } = {};
-  pageSize = 1; // Number of components per page
   iframeSrc: { [category: string]: SafeResourceUrl } = {}; // Map to hold iframe sources
 
   constructor(private componentService: ComponentService, private sanitizer: DomSanitizer) {}
@@ -30,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   sanitizeUsage(usage: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(usage);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`data:text/html;charset=utf-8,${encodeURIComponent(usage)}`);
   }
 
   filterComponentsByCategory(): void {
@@ -47,11 +46,9 @@ export class AppComponent implements OnInit {
   }
 
   updateIframeSrc(category: string): void {
-    const componentId = this.filteredComponents[category]?.[this.currentComponentIndex[category]]?.id;
-    if (componentId) {
-      this.componentService.getComponentHtml(componentId).subscribe(html => {
-        this.iframeSrc[category] = this.sanitizeUsage(`data:text/html;charset=utf-8,${encodeURIComponent(html)}`);
-      });
+    const component = this.filteredComponents[category]?.[this.currentComponentIndex[category]];
+    if (component) {
+      this.iframeSrc[category] = this.sanitizeUsage(component.usage); // Use `usage` property here
     }
   }
 
