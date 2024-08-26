@@ -3,7 +3,7 @@ const path = require('path');
 const glob = require('glob');
 
 // Directories containing the components
-const componentDirs = ['buttons', 'navbars', 'drop-lists','forms','modals'];
+const componentDirs = ['buttons', 'navbars', 'drop-lists', 'forms', 'modals'];
 // Path to the library source
 const libPath = path.join(__dirname, 'projects', 'sw-ui', 'src', 'lib');
 // Path where the TypeScript metadata file will be saved
@@ -16,6 +16,15 @@ function getComponentName(filePath) {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const match = fileContent.match(/selector:\s*'([^']+)'/);
   return match ? match[1] : null;
+}
+
+// Function to read the component HTML content
+function getComponentHtml(filePath) {
+  const htmlFilePath = filePath.replace('.component.ts', '.component.html');
+  if (fs.existsSync(htmlFilePath)) {
+    return fs.readFileSync(htmlFilePath, 'utf-8');
+  }
+  return null;
 }
 
 // Function to generate the metadata for the components
@@ -34,12 +43,16 @@ function generateMetadata() {
       if (componentName) {
         // Get the relative path to the component file
         const componentPath = path.relative(libPath, file).replace(/\\/g, '/');
+        // Get the HTML content of the component
+        const componentHtml = getComponentHtml(file);
+
         // Add the component metadata to the list
         metadata.push({
           name: componentName,
           selector: componentName,
           description: `A description for ${componentName}`,
           usage: `<${componentName}></${componentName}>`,
+          code: componentHtml ? componentHtml : 'No HTML file found.',
           path: componentPath,
           category: componentPath.split('/')[0]
         });
