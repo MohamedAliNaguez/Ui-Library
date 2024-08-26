@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
   updateIframeSrc(category: string): void {
     const component = this.filteredComponents[category]?.[this.currentComponentIndex[category]];
     if (component) {
-      this.iframeSrc[category] = this.sanitizeUsage(component.usage); // Use `usage` property here
+      this.iframeSrc[category] = this.sanitizeUsage(component.code); // Use `code` property here
     }
   }
 
