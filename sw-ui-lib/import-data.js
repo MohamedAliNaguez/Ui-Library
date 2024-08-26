@@ -26,6 +26,7 @@ const ComponentSchema = new mongoose.Schema({
   selector: String,
   description: String,
   usage: String,
+  code: String,
   path: String,
   category: String
 });
