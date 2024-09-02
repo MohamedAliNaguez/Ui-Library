@@ -8,7 +8,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'SW UI LIBRARY';
+  title = 'SW UI LIBRARYv2';
   components: any[] = [];
   filteredComponents: { [category: string]: any[] } = {};
   categories: string[] = [];
