@@ -7,7 +7,6 @@ const port = 3000;
 
 // Access the MongoDB URI from environment variables
  const mongoString = process.env.MONGO_STRING;
-//const mongoString = 'mongodb+srv://dalynaguez:8MP4N7S03knLVfsS@swlib.sf6hzyx.mongodb.net/swlib';
 
 if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.startsWith('mongodb+srv://'))) {
   console.error('Invalid MongoDB connection string');
