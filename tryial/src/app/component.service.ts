@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ComponentService {
-  private apiUrl = 'http://localhost:3000/api/components'; // Your components API
-  private previewUrl = 'http://localhost:3000/api/preview'; // Updated HTML content service URL
+  private apiUrl = 'https://swlib-backend.onrender.com/api/components'; // Your components API
+  private previewUrl = 'https://swlib-backend.onrender.com/api/preview'; // Updated HTML content service URL
 
   constructor(private http: HttpClient) { }
 
