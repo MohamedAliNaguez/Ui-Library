@@ -1,31 +1,5 @@
-<div class="container">
-  <h1 class="title">{{ title }}</h1>
+<ng-container>
+  <router-outlet></router-outlet>
 
-  <div class="category-container">
-    <ng-container *ngFor="let category of categories">
-      <ng-container *ngIf="filteredComponents[category]?.length">
-        <div class="category-card">
-          <h2 class="category-title">{{ category }}</h2>
+</ng-container>
 
-          <div class="card-container">
-            <div class="card">
-              <h3 class="card-title">{{ filteredComponents[category][currentComponentIndex[category]]?.name }}</h3>
-              <p><strong>Usage:</strong> {{ filteredComponents[category][currentComponentIndex[category]]?.usage }}</p>
-              <button (click)="copyToClipboard(filteredComponents[category][currentComponentIndex[category]]?.usage)" class="copy-button">
-                <i class="fas fa-copy"></i>
-              </button>
-              <pre><strong>Preview:</strong></pre>
-
-              <iframe *ngIf="iframeSrc[category]" [src]="iframeSrc[category]" width="100%" height="300px" frameborder="0"></iframe>
-            </div>
-          </div>
-
-          <div class="pagination-controls">
-            <button (click)="prevPage(category)">&#8592; Previous</button>
-            <button (click)="nextPage(category)">Next &#8594;</button>
-          </div>
-        </div>
-      </ng-container>
-    </ng-container>
-  </div>
-</div>
