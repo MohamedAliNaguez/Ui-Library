@@ -1,14 +1,20 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+<<<<<<< HEAD
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+=======
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819
 
 const app = express();
 const port = 3000;
 
 // Access the MongoDB URI from environment variables
+<<<<<<< HEAD
 //const mongoString = 'mongodb+srv://dalynaguez:8MP4N7S03knLVfsS@swlib.sf6hzyx.mongodb.net/swlib';
+=======
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819
  const mongoString = process.env.MONGO_STRING;
 
 if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.startsWith('mongodb+srv://'))) {
@@ -40,6 +46,7 @@ const ComponentSchema = new mongoose.Schema({
 
 const Component = mongoose.model('Component', ComponentSchema);
 
+<<<<<<< HEAD
 // Define User Schema and Model
 const UserSchema = new mongoose.Schema({
   name: String,
@@ -59,6 +66,8 @@ UserSchema.set('toJSON', {
 
 const User = mongoose.model('User', UserSchema);
 
+=======
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819
 // Middleware setup
 app.use(cors()); // Enable CORS for all origins
 app.use(express.json()); // Parse JSON requests
@@ -73,14 +82,28 @@ app.get('/api/components', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
+// New route to serve HTML content
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819
 app.get('/api/preview/:componentId', async (req, res) => {
   const componentId = req.params.componentId;
 
   try {
     const component = await Component.findById(componentId);
     if (component) {
+<<<<<<< HEAD
       const htmlContent = `
         ${component.usage}
+=======
+      // Create a basic HTML document containing the usage field
+      const htmlContent = `
+      
+      
+          ${component.usage}
+      
+       
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819
       `;
       res.send(htmlContent);
       console.log(htmlContent);
@@ -92,6 +115,7 @@ app.get('/api/preview/:componentId', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 // User Registration
 app.post('/api/register', async (req, res) => {
   const { name, lastname, role, email, password } = req.body;
@@ -159,3 +183,9 @@ app.get('/api/protected', authenticateToken, (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+=======
+// Start server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+>>>>>>> 483ee816f6b1bbd795d5b07c815663e14e135819

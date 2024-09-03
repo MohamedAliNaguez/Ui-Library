@@ -1,0 +1,139 @@
+/* Main container styles */
+.container {
+  background-color: #f0f4f8;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  color: #004c6d;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Category container styling */
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* Category card styling */
+.category-card {
+  background-color: white;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc((100% / 3) - 40px); /* Ensure 3 items max per row, subtracting the gap space */
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Category title styling */
+.category-title {
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  color: #0073a7;
+  font-weight: 500;
+}
+
+/* Card container styling */
+.card-container {
+  padding: 15px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #004c6d;
+  font-weight: 500;
+}
+
+/* Preview and usage styling */
+.usage {
+  background-color: #e8eff5;
+  padding: 10px;
+  border-radius: 6px;
+  color: #555;
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* Pagination controls styling */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.pagination-controls button {
+  background-color: #0073a7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #005f89;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-card {
+    width: calc((100% / 2) - 40px); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-card {
+    width: 100%; /* 1 item per row on small screens */
+  }
+}
+/* Copy button styling */
+.copy-button {
+  background: none;
+  border: none;
+  color: #0073a7;
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust size as needed */
+  margin-left: 8px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.copy-button i {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.copy-button:hover {
+  color: #005f89;
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.copy-button:focus {
+  outline: none;
+}
