@@ -1,23 +1,24 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const app = express();
-const port = 3000;
+require('dotenv').config(); // Load environment variables
 
-// Access the MongoDB URI from environment variables
-const mongoString = 'mongodb+srv://dalynaguez:8MP4N7S03knLVfsS@swlib.sf6hzyx.mongodb.net/swlib';
- //const mongoString = process.env.MONGO_STRING;
+const app = express();
+const port = process.env.PORT || 3000; // Use environment variable for port, fallback to 3000
+//const mongoString = process.env.MONGO_STRING;
+
+const mongoString = process.env.MONGO_STRING;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 if (!mongoString || (!mongoString.startsWith('mongodb://') && !mongoString.startsWith('mongodb+srv://'))) {
   console.error('Invalid MongoDB connection string');
-  console.log(mongoString);
   process.exit(1);
 }
 
-// MongoDB connection setup 
 mongoose.connect(mongoString)
   .then(() => {
     console.log('Connected to MongoDB');
@@ -27,7 +28,6 @@ mongoose.connect(mongoString)
     process.exit(1);
   });
 
-// Define Component Schema and Model
 const ComponentSchema = new mongoose.Schema({
   name: String,
   selector: String,
@@ -40,7 +40,6 @@ const ComponentSchema = new mongoose.Schema({
 
 const Component = mongoose.model('Component', ComponentSchema);
 
-// Define User Schema and Model
 const UserSchema = new mongoose.Schema({
   name: String,
   lastname: String,
@@ -59,11 +58,9 @@ UserSchema.set('toJSON', {
 
 const User = mongoose.model('User', UserSchema);
 
-// Middleware setup
-app.use(cors()); // Enable CORS for all origins
-app.use(express.json()); // Parse JSON requests
+app.use(cors());
+app.use(express.json());
 
-// Define API routes
 app.get('/api/components', async (req, res) => {
   try {
     const components = await Component.find({});
@@ -79,11 +76,8 @@ app.get('/api/preview/:componentId', async (req, res) => {
   try {
     const component = await Component.findById(componentId);
     if (component) {
-      const htmlContent = `
-        ${component.usage}
-      `;
+      const htmlContent = `${component.usage}`;
       res.send(htmlContent);
-      console.log(htmlContent);
     } else {
       res.status(404).send('Component not found');
     }
@@ -92,7 +86,6 @@ app.get('/api/preview/:componentId', async (req, res) => {
   }
 });
 
-// User Registration
 app.post('/api/register', async (req, res) => {
   const { name, lastname, role, email, password } = req.body;
 
@@ -113,7 +106,6 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
-// User Login
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -136,7 +128,6 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// Middleware to protect routes
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -150,12 +141,10 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Example protected route
 app.get('/api/protected', authenticateToken, (req, res) => {
   res.json({ message: 'This is a protected route', user: req.user });
 });
 
-// Start server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
