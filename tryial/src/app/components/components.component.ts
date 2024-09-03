@@ -3,7 +3,7 @@ import { ComponentService } from '../component.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-components',
   templateUrl: './components.component.html',
   styleUrls: ['./components.component.css']
 })
