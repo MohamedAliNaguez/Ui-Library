@@ -1,5 +1,14 @@
 [
   {
+    "name": "lib-sw-close-button",
+    "selector": "lib-sw-close-button",
+    "description": "A description for lib-sw-close-button",
+    "usage": "<lib-sw-close-button></lib-sw-close-button>",
+    "code": "<button class=\"close-button\" >\n    &times; <!-- This represents the close icon (×) -->\n</button>\n",
+    "path": "buttons/sw-close-button/sw-close-button.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-primary-button",
     "selector": "lib-sw-primary-button",
     "description": "A description for lib-sw-primary-button",
