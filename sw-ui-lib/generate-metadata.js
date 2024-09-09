@@ -24,7 +24,16 @@ function getComponentHtml(filePath) {
   if (fs.existsSync(htmlFilePath)) {
     return fs.readFileSync(htmlFilePath, 'utf-8');
   }
-  return null;
+  return 'No HTML file found.';
+}
+
+// Function to read the component CSS content
+function getComponentCss(filePath) {
+  const cssFilePath = filePath.replace('.component.ts', '.component.css');
+  if (fs.existsSync(cssFilePath)) {
+    return fs.readFileSync(cssFilePath, 'utf-8');
+  }
+  return 'No CSS file found.';
 }
 
 // Function to generate the metadata for the components
@@ -43,8 +52,17 @@ function generateMetadata() {
       if (componentName) {
         // Get the relative path to the component file
         const componentPath = path.relative(libPath, file).replace(/\\/g, '/');
-        // Get the HTML content of the component
+        // Get the HTML and CSS content of the component
         const componentHtml = getComponentHtml(file);
+        const componentCss = getComponentCss(file);
+
+        // Combine HTML and CSS into a single string
+        const combinedCode = `
+          <style>
+            ${componentCss}
+          </style>
+          ${componentHtml}
+        `;
 
         // Add the component metadata to the list
         metadata.push({
@@ -52,7 +70,7 @@ function generateMetadata() {
           selector: componentName,
           description: `A description for ${componentName}`,
           usage: `<${componentName}></${componentName}>`,
-          code: componentHtml ? componentHtml : 'No HTML file found.',
+          code: combinedCode,
           path: componentPath,
           category: componentPath.split('/')[0]
         });
