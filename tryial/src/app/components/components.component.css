@@ -9,19 +9,15 @@
 :root {
     --primary-color: #ffdd57; /* Soft Yellow */
     --second-color: #ffffff;  /* White */
-    --accent-color: #2e86de;  /* Bright Blue */
-    --text-color: #1c2833;    /* Darker Gray */
-    --black-color: #000000;
+    --accent-color: #3498db;  /* Vibrant Blue */
+    --text-color: #333333;    /* Dark Gray */
+    --black-color: #000000;   /* Black */
 }
 
 /* Body Styles */
 body {
-    background-color: #0e4d92; /* Deep Blue for better blend */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--second-color);
+    background-color: #ffffff; /* White background for the website */
+    color: var(--text-color);
     min-height: 100vh;
 }
 
@@ -39,23 +35,23 @@ a:hover {
 .container {
     width: 100%;
     max-width: 1200px; /* Added max-width for better layout control */
-    margin: 0 auto;    /* Center the container */
+    margin: 20px auto;    /* Center the container */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px; /* Increased padding for better spacing */
-    background: rgba(0, 0, 0, 0.3); /* Increased opacity for better visibility */
+    background: rgba(0, 0, 0, 0.1); /* Light transparent background for subtle effect */
     border-radius: 20px; /* Rounded corners for aesthetics */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
-}
+    background-color: rgba(14, 77, 146, 0.4); /* Semi-transparent Deep Blue */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */}
 
 /* Title Styles */
 .title {
     font-size: 2.5em;
-    color: var(--second-color);
+    color: var(--text-color);
     margin-bottom: 30px; /* Increased margin for spacing */
     text-align: center;  /* Center the title */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow for readability */
 }
 
 /* Category Container */
@@ -70,14 +66,13 @@ a:hover {
 .category-card {
     width: 100%;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.2); /* Reduced transparency */
     border: 2px solid var(--primary-color);
     border-radius: 15px;
     padding: 30px; /* Increased padding */
     margin: 20px 0; /* Increased margin */
-    color: var(--second-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
-    backdrop-filter: blur(10px); /* Added blur for better text clarity */
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with slight opacity */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Category Title Styles */
@@ -85,8 +80,8 @@ a:hover {
     font-size: 1.8em;
     margin-bottom: 20px;
     text-align: center;
-    color: var(--second-color);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for readability */
 }
 
 /* Card Container */
@@ -95,86 +90,62 @@ a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
 }
 
 /* Individual Card Styles */
 .card {
     width: 100%;
     max-width: 750px; /* Consistent max-width */
-    background-color: rgba(0, 0, 0, 0.6); /* Reduced transparency for better contrast */
     border: 2px solid var(--primary-color);
     border-radius: 15px;
     padding: 25px; /* Increased padding */
     margin: 15px 0; /* Increased margin */
-    color: var(--second-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
-    backdrop-filter: blur(5px); /* Added blur for text clarity */
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
 }
 
 /* Card Title Styles */
 .card-title {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--second-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for readability */
 }
 
-/* Copy Button Styles */
 /* Copy Button Styles */
 .copy-button {
     border: none;
     border-radius: 30px;
-    color: var(--text-color);
+    color: var(--second-color);
     cursor: pointer;
     font-size: 16px;
     padding: 12px 25px; /* Increased padding for better click area */
     margin: 15px auto; /* Center the button horizontally with auto margins */
     display: block; /* Ensure it behaves as a block element for centering */
     transition: background 0.3s, color 0.3s; /* Added color transition */
-    background-color: rgba(14, 77, 146, 0.7); /* Semi-transparent Deep Blue */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    background-color: var(--accent-color); /* Vibrant Blue background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .copy-button:hover {
-    background: var(--accent-color);
-    color: var(--second-color);
+    background: var(--primary-color); /* Soft Yellow on hover */
+    color: var(--text-color);
 }
 
-/* Iframe Styles */
 /* Iframe Styles */
 iframe {
     width: 100%; /* Ensure iframes are responsive */
     height: 200px; /* Reduced height for a smaller preview box */
     border: none;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     margin-top: 10px; /* Added margin for spacing */
+    background-color: rgba(14, 77, 146, 0.3); /* Semi-transparent Deep Blue */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    
 }
-
-/* Card Styles */
-.card {
-    width: 100%;
-    max-width: 750px; /* Consistent max-width */
-    background-color: rgba(0, 0, 0, 0.6); /* Reduced transparency for better contrast */
-    border: 2px solid var(--primary-color);
-    border-radius: 15px;
-    padding: 25px; /* Increased padding */
-    margin: 15px 0; /* Increased margin */
-    color: var(--second-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
-    backdrop-filter: blur(5px); /* Added blur for text clarity */
-}
-
-/* Card Container */
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-/* Other existing styles remain unchanged */
-
 
 /* Pagination Controls */
 .pagination-controls {
@@ -193,7 +164,7 @@ iframe {
     font-size: 16px;
     padding: 12px 25px; /* Increased padding */
     transition: background 0.3s, color 0.3s; /* Added color transition */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .pagination-controls button:hover {
@@ -232,6 +203,7 @@ iframe {
         height: 300px; /* Adjust iframe height for smaller screens */
     }
 }
+
 /* Filter Bar Container */
 .filter-bar {
     width: 100%;
@@ -245,7 +217,7 @@ iframe {
 /* Filter Label Styles */
 .filter-bar label {
     font-size: 2em; /* Size of the label text */
-    color:  black; 
+    color: var(--text-color); /* Dark Gray text */
     margin-bottom: 10px; /* Space between label and dropdown */
 }
 
@@ -259,21 +231,22 @@ iframe {
     width: 100%; /* Full width of the container */
     max-width: 300px; /* Limit width for better aesthetics */
     margin: 10px 0; /* Margin for spacing */
-    background-color: rgba(14, 77, 146, 0.7); /* Semi-transparent Deep Blue */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */    transition: background 0.3s, color 0.3s; /* Smooth transition for background and color */
+    background-color: var(--accent-color); /* Vibrant Blue background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for background and color */
 }
 
 #category-filter:focus {
     outline: none; /* Remove default focus outline */
-    border-color: var(--accent-color); /* Highlight border on focus */
-    background: var(--accent-color); /* Change background on focus */
-    color: var(--second-color); /* Change text color on focus */
+    border-color: var(--primary-color); /* Highlight border on focus */
+    background: var(--primary-color); /* Soft Yellow on focus */
+    color: var(--text-color); /* Dark Gray text on focus */
 }
 
 /* Filter Dropdown Options */
 #category-filter option {
-    background: var(--second-color);
-    color: var(--text-color);
+    background: var(--second-color); /* White background for options */
+    color: var(--text-color); /* Dark Gray text */
 }
 
 /* Responsive Styles for Filters */
@@ -287,4 +260,3 @@ iframe {
         font-size: 16px; /* Adjust label size for smaller screens */
     }
 }
-
