@@ -1,9 +1,12 @@
 <header *ngIf="authService.isAuthenticated()">
-    <div class="logo">
+    <div class="header">
+      <div class="logo">
         <img src="../../assets/images.jpeg" alt="Logo" />
-    </div>
-    <div class="welcome-message">
+      </div>
+      <div class="welcome-message">
         Welcome, {{ userName }}
+      </div>
+      <button class="logout-button" (click)="onLogout()">Logout</button>
     </div>
-    <button class="logout-button" (click)="onLogout()">Logout</button>
-</header>
+  </header>
+  

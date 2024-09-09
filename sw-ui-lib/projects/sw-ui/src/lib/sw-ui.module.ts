@@ -15,6 +15,7 @@ import { SwSelectDropdownComponentComponent } from './forms/sw-select-dropdown-c
 import { SwBasicModalComponentComponent } from './modals/sw-basic-modal-component/sw-basic-modal-component.component';
 import { SwConfirmationDialogComponentComponent } from './modals/sw-confirmation-dialog-component/sw-confirmation-dialog-component.component';
 import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw-alert-box-component.component';
+import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-button.component';
 
 
 
@@ -36,7 +37,8 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
   SwSelectDropdownComponentComponent,
   SwTextAreaComponentComponent,
   SwBasicModalComponentComponent,
-  SwUiComponent
+  SwUiComponent,
+  SwCloseButtonComponent
 ],
   imports: [
   ],

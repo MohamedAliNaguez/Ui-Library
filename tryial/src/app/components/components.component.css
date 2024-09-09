@@ -120,17 +120,19 @@ a:hover {
 }
 
 /* Copy Button Styles */
+/* Copy Button Styles */
 .copy-button {
-    background: var(--primary-color);
     border: none;
     border-radius: 30px;
     color: var(--text-color);
     cursor: pointer;
     font-size: 16px;
     padding: 12px 25px; /* Increased padding for better click area */
-    margin-top: 15px; /* Increased margin */
+    margin: 15px auto; /* Center the button horizontally with auto margins */
+    display: block; /* Ensure it behaves as a block element for centering */
     transition: background 0.3s, color 0.3s; /* Added color transition */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    background-color: rgba(14, 77, 146, 0.7); /* Semi-transparent Deep Blue */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
 }
 
 .copy-button:hover {
@@ -139,13 +141,40 @@ a:hover {
 }
 
 /* Iframe Styles */
+/* Iframe Styles */
 iframe {
     width: 100%; /* Ensure iframes are responsive */
-    height: 400px; /* Set a default height */
+    height: 200px; /* Reduced height for a smaller preview box */
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    margin-top: 10px; /* Added margin for spacing */
 }
+
+/* Card Styles */
+.card {
+    width: 100%;
+    max-width: 750px; /* Consistent max-width */
+    background-color: rgba(0, 0, 0, 0.6); /* Reduced transparency for better contrast */
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 25px; /* Increased padding */
+    margin: 15px 0; /* Increased margin */
+    color: var(--second-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    backdrop-filter: blur(5px); /* Added blur for text clarity */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Other existing styles remain unchanged */
+
 
 /* Pagination Controls */
 .pagination-controls {
@@ -215,14 +244,13 @@ iframe {
 
 /* Filter Label Styles */
 .filter-bar label {
-    font-size: 18px; /* Size of the label text */
-    color: var(--second-color); /* Color for better readability */
+    font-size: 2em; /* Size of the label text */
+    color:  black; 
     margin-bottom: 10px; /* Space between label and dropdown */
 }
 
 /* Filter Dropdown Styles */
 #category-filter {
-    background: var(--second-color);
     border: 2px solid var(--primary-color);
     border-radius: 15px;
     color: var(--text-color);
@@ -231,8 +259,8 @@ iframe {
     width: 100%; /* Full width of the container */
     max-width: 300px; /* Limit width for better aesthetics */
     margin: 10px 0; /* Margin for spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-    transition: background 0.3s, color 0.3s; /* Smooth transition for background and color */
+    background-color: rgba(14, 77, 146, 0.7); /* Semi-transparent Deep Blue */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */    transition: background 0.3s, color 0.3s; /* Smooth transition for background and color */
 }
 
 #category-filter:focus {
