@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +38,14 @@ export class AuthService {
   // Logout the user by removing the token
   logout(): void {
     localStorage.removeItem(this.tokenKey);
+  }
+  getUserDetails(): Observable<any> {
+    const token = this.getToken();
+    if (!token) {
+      return of(null);
+    }
+    return this.http.get<any>(`${this.apiUrl}/user-details`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
   }
 }

@@ -1,5 +1,4 @@
-// header.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -8,8 +7,18 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  userName: string | null = null;
+
   constructor(public authService: AuthService, private router: Router) {}
+
+  ngOnInit(): void {
+    if (this.authService.isAuthenticated()) {
+      this.authService.getUserDetails().subscribe(user => {
+        this.userName = user?.name || 'Guest'; // Use 'Guest' if user name is not available
+      });
+    }
+  }
 
   onLogout() {
     this.authService.logout();
