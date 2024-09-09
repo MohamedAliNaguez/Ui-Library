@@ -22,7 +22,6 @@ import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-butto
 
 @NgModule({
   declarations: [
-  SwRightAlignedNavbarComponent,
   SwPrimaryButtonComponent,
   SwSimpleNavbarComponent,
   SwSecondaryButtonComponent,
@@ -38,12 +37,12 @@ import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-butto
   SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
   SwConfirmationDialogComponentComponent,
-  SwCentredNavbarComponent
+  SwCentredNavbarComponent,
+  SwRightAlignedNavbarComponent
 ],
   imports: [
   ],
   exports: [
-  SwIconsDropdownListComponent,
   SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
@@ -59,6 +58,7 @@ import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-butto
   SwStyledDropdownListComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
+  SwIconsDropdownListComponent,
   SwUiComponent
 ]
 })
