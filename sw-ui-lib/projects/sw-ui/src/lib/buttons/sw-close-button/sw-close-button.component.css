@@ -14,6 +14,6 @@
 }
 
 .close-button:hover {
-    background: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+    background: red; /* Slight background on hover */
     color: var(--accent-color); /* Accent color on hover */
 }
