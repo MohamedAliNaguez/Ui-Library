@@ -1,0 +1,19 @@
+.close-button {
+    background: transparent; /* No background color */
+    border: none; /* No border */
+    color: var(--text-color); /* Use your text color */
+    font-size: 1.5em; /* Adjust size of the close icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 50%; /* Rounded shape */
+    width: 40px; /* Set button size */
+    height: 40px; /* Set button size */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+    color: var(--accent-color); /* Accent color on hover */
+}
