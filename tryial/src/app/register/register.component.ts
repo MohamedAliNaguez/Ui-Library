@@ -1,5 +1,4 @@
-// register.component.ts
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -7,7 +6,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
   name: string = '';
   lastname: string = '';
   role: string = '';
@@ -17,6 +16,11 @@ export class RegisterComponent {
   success: string = '';
 
   constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    // Any initialization code if needed
+  }
+
 
   register() {
     this.authService.register(this.name, this.lastname, this.role, this.email, this.password).subscribe({

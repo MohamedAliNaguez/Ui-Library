@@ -1,5 +1,3 @@
-<ng-container>
-  <router-outlet></router-outlet>
-
-</ng-container>
-
+<!-- app.component.html -->
+<app-header *ngIf="authService.isAuthenticated()"></app-header>
+<router-outlet></router-outlet>

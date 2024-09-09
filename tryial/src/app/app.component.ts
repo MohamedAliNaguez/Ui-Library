@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ComponentService } from './component.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
   currentComponentIndex: { [category: string]: number } = {};
   iframeSrc: { [category: string]: SafeResourceUrl } = {};
 
-  constructor(private componentService: ComponentService, private sanitizer: DomSanitizer ,     private renderer: Renderer2
+  constructor(public authService: AuthService, private componentService: ComponentService, private sanitizer: DomSanitizer ,     private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {

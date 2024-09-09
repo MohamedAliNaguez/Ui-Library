@@ -1,24 +1,46 @@
-<div>
-    <h2>Register</h2>
-    <form (ngSubmit)="register()">
-      <label>Name:</label>
-      <input [(ngModel)]="name" name="name" required>
-      
-      <label>Lastname:</label>
-      <input [(ngModel)]="lastname" name="lastname" required>
-      
-      <label>Role:</label>
-      <input [(ngModel)]="role" name="role" required>
-      
-      <label>Email:</label>
-      <input type="email" [(ngModel)]="email" name="email" required>
-      
-      <label>Password:</label>
-      <input type="password" [(ngModel)]="password" name="password" required>
-      
-      <button type="submit">Register</button>
-    </form>
-    <p *ngIf="success">{{ success }}</p>
-    <p *ngIf="error">{{ error }}</p>
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="wrapper">
+    <div class="login_box">
+      <div class="login-header">
+        <span>Register</span>
+      </div>
+      <form (ngSubmit)="register()">
+        <div class="input_box">
+          <input type="text" id="name" class="input-field" [(ngModel)]="name" name="name" required />
+          <label for="name" class="label">Name</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="text" id="lastname" class="input-field" [(ngModel)]="lastname" name="lastname" required />
+          <label for="lastname" class="label">Lastname</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="text" id="role" class="input-field" [(ngModel)]="role" name="role" required />
+          <label for="role" class="label">Role</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="email" id="email" class="input-field" [(ngModel)]="email" name="email" required />
+          <label for="email" class="label">Email</label>
+          <i class="bx bx-envelope icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="password" class="input-field" [(ngModel)]="password" name="password" required />
+          <label for="password" class="label">Password</label>
+          <i class="bx bx-lock-alt icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="submit" class="input-submit" value="Register" />
+        </div>
+        <p *ngIf="success" class="success-message">{{ success }}</p>
+        <p *ngIf="error" class="error-message">{{ error }}</p>
+        <div class="register">
+          <span>Already have an account?  <a [routerLink]="['/login']">Login</a></span>
+        </div>
+      </form>
+    </div>
   </div>
-  
+  <!-- partial -->
+</body>

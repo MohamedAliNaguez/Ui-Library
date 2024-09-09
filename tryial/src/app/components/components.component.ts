@@ -12,11 +12,11 @@ export class ComponentsComponent implements OnInit {
   components: any[] = [];
   filteredComponents: { [category: string]: any[] } = {};
   categories: string[] = [];
+  filteredCategories: string[] = []; // This should be an array of strings
   currentComponentIndex: { [category: string]: number } = {};
   iframeSrc: { [category: string]: SafeResourceUrl } = {};
 
-  constructor(private componentService: ComponentService, private sanitizer: DomSanitizer ,     private renderer: Renderer2
-  ) {}
+  constructor(private componentService: ComponentService, private sanitizer: DomSanitizer, private renderer: Renderer2) {}
 
   ngOnInit(): void {
     this.componentService.getComponents().subscribe(data => {
@@ -25,8 +25,11 @@ export class ComponentsComponent implements OnInit {
       // Extract unique categories
       this.categories = Array.from(new Set(data.map((c: any) => c.category)));
 
+      // Initialize with all categories
+      this.filteredCategories = [...this.categories]; // Set initial filter to include all categories
+
       // Filter components and initialize component indexes
-      this.filterComponentsByCategory();
+      this.filterComponentsByCategory('all');
       this.initializeComponentIndexes();
 
       // Ensure iframe src is set for all categories after initialization
@@ -38,10 +41,23 @@ export class ComponentsComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(`data:text/html;charset=utf-8,${encodeURIComponent(usage)}`);
   }
 
-  filterComponentsByCategory(): void {
-    this.categories.forEach(category => {
+  filterByCategory(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    const selectedCategory = target.value;
+
+    this.filterComponentsByCategory(selectedCategory);
+  }
+
+  filterComponentsByCategory(category: string): void {
+    if (category === 'all') {
+      this.filteredCategories = [...this.categories];
+      this.categories.forEach(cat => {
+        this.filteredComponents[cat] = this.components.filter((component: any) => component.category === cat);
+      });
+    } else {
+      this.filteredCategories = [category];
       this.filteredComponents[category] = this.components.filter((component: any) => component.category === category);
-    });
+    }
   }
 
   initializeComponentIndexes(): void {
@@ -52,7 +68,6 @@ export class ComponentsComponent implements OnInit {
   }
 
   updateIframeSrc(category: string): void {
-    // Update iframe src with the current component in the filtered list
     const component = this.filteredComponents[category]?.[this.currentComponentIndex[category]];
     if (component) {
       this.iframeSrc[category] = this.sanitizeUsage(component.code);
@@ -63,7 +78,6 @@ export class ComponentsComponent implements OnInit {
     if (this.currentComponentIndex[category] > 0) {
       this.currentComponentIndex[category]--;
     } else {
-      // Loop back to the last component if on the first component
       this.currentComponentIndex[category] = this.filteredComponents[category].length - 1;
     }
     this.updateIframeSrc(category);
@@ -73,11 +87,11 @@ export class ComponentsComponent implements OnInit {
     if (this.currentComponentIndex[category] < this.filteredComponents[category].length - 1) {
       this.currentComponentIndex[category]++;
     } else {
-      // Loop back to the first component if on the last component
       this.currentComponentIndex[category] = 0;
     }
     this.updateIframeSrc(category);
   }
+
   copyToClipboard(usage: string): void {
     const textarea = this.renderer.createElement('textarea');
     this.renderer.setStyle(textarea, 'position', 'fixed');

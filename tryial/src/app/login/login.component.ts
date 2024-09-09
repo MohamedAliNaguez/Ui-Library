@@ -1,4 +1,3 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
@@ -19,12 +18,13 @@ export class LoginComponent {
   login() {
     this.authService.login(this.email, this.password).subscribe({
       next: (response) => {
-        localStorage.setItem('token', response.token); // Store JWT token
+        this.authService.storeToken(response.token); // Store JWT token using AuthService
         this.success = 'Login successful!';
         this.error = '';
-        this.router.navigate(['/protected']); // Navigate to a protected route
+        this.router.navigate(['/components']); // Navigate to a protected route
       },
       error: (err) => {
+        console.log(err);
         this.error = err.error.error || 'Login failed';
         this.success = '';
       }

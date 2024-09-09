@@ -1,4 +1,3 @@
-// auth.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -7,10 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  isAuthenticated() {
-    throw new Error('Method not implemented.');
-  }
   private apiUrl = 'https://swlib-backend.onrender.com/api'; // Your backend API URL
+  private tokenKey = 'authToken'; // Key for storing the token in localStorage
 
   constructor(private http: HttpClient) {}
 
@@ -22,5 +19,23 @@ export class AuthService {
     return this.http.post<{ token: string }>(`${this.apiUrl}/login`, { email, password });
   }
 
-  // Optionally, add methods to get and store the JWT token, check authentication status, etc.
+  // Store the JWT token
+  storeToken(token: string): void {
+    localStorage.setItem(this.tokenKey, token);
+  }
+
+  // Retrieve the JWT token
+  getToken(): string | null {
+    return localStorage.getItem(this.tokenKey);
+  }
+
+  // Check if the user is authenticated by checking if the token exists
+  isAuthenticated(): boolean {
+    return !!this.getToken();
+  }
+
+  // Logout the user by removing the token
+  logout(): void {
+    localStorage.removeItem(this.tokenKey);
+  }
 }

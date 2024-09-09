@@ -1,0 +1,8 @@
+<header *ngIf="authService.isAuthenticated()">
+    <div class="logo">
+        <img src="../../assets/images.jpeg" alt="Logo" />
+    </div>
+    <button class="logout-button" (click)="onLogout()">Logout</button>
+</header>
+
+  

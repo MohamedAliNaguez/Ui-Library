@@ -10,20 +10,23 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ComponentsComponent } from './components/components.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ComponentsComponent
+    ComponentsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     HttpClientModule,
     SwUiModule,
-    RouterModule.forRoot(routes), // Add RouterModule here
+    RouterModule.forRoot(routes),
+    
 
   ],
   providers: [],
