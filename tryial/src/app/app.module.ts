@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ComponentsComponent } from './components/components.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
     RegisterComponent,
     LoginComponent,
     ComponentsComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     SwUiModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
     
 
   ],

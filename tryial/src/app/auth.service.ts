@@ -19,6 +19,7 @@ export class AuthService {
   login(email: string, password: string): Observable<any> {
     return this.http.post<{ token: string }>(`${this.apiUrl}/login`, { email, password });
   }
+  
 
   // Store the JWT token
   storeToken(token: string): void {
@@ -32,8 +33,13 @@ export class AuthService {
 
   // Check if the user is authenticated by checking if the token exists
   isAuthenticated(): boolean {
-    return !!this.getToken();
+    const token = this.getToken();
+    if (!token) return false;
+  
+    const expiry = (JSON.parse(atob(token.split('.')[1]))).exp;
+    return (Math.floor((new Date).getTime() / 1000)) < expiry;
   }
+  
 
   // Logout the user by removing the token
   logout(): void {

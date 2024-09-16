@@ -1,6 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ComponentService } from '../component.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import * as Prism from 'prismjs';
 
 @Component({
   selector: 'app-components',
@@ -12,7 +13,7 @@ export class ComponentsComponent implements OnInit {
   components: any[] = [];
   filteredComponents: { [category: string]: any[] } = {};
   categories: string[] = [];
-  filteredCategories: string[] = []; // This should be an array of strings
+  filteredCategories: string[] = [];
   currentComponentIndex: { [category: string]: number } = {};
   iframeSrc: { [category: string]: SafeResourceUrl } = {};
 
@@ -26,7 +27,7 @@ export class ComponentsComponent implements OnInit {
       this.categories = Array.from(new Set(data.map((c: any) => c.category)));
 
       // Initialize with all categories
-      this.filteredCategories = [...this.categories]; // Set initial filter to include all categories
+      this.filteredCategories = [...this.categories];
 
       // Filter components and initialize component indexes
       this.filterComponentsByCategory('all');
@@ -62,7 +63,6 @@ export class ComponentsComponent implements OnInit {
 
   initializeComponentIndexes(): void {
     this.categories.forEach(category => {
-      // Start at the first component for each category
       this.currentComponentIndex[category] = 0;
     });
   }
@@ -102,5 +102,10 @@ export class ComponentsComponent implements OnInit {
     document.execCommand('copy');
     this.renderer.removeChild(document.body, textarea);
     alert('Usage code copied to clipboard!');
+  }
+
+  // New method to highlight code
+  highlightedCode(code: string): string {
+    return Prism.highlight(code, Prism.languages.javascript, 'javascript');
   }
 }

@@ -23,13 +23,10 @@
               <h3 class="card-title">{{ filteredComponents[category][currentComponentIndex[category]]?.name }}</h3>
               <p><strong>Usage:</strong> {{ filteredComponents[category][currentComponentIndex[category]]?.usage }}</p>
 
-
-              <pre class="code-block">
-                <code>
-                  <strong>Code:</strong>
-                  {{ filteredComponents[category][currentComponentIndex[category]]?.code }}
-                </code>
-              </pre>
+              <!-- Code block inside a pre element to simulate IDE -->
+              <div class="ide-code-block">
+                <pre><code [innerHTML]="highlightedCode(filteredComponents[category][currentComponentIndex[category]]?.code)"></code></pre>
+              </div>
 
               <button (click)="copyToClipboard(filteredComponents[category][currentComponentIndex[category]]?.code)" class="copy-button">
                 COPY

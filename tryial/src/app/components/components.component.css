@@ -42,9 +42,76 @@ a:hover {
     padding: 40px 20px; /* Increased padding for better spacing */
     background: rgba(0, 0, 0, 0.1); /* Light transparent background for subtle effect */
     border-radius: 20px; /* Rounded corners for aesthetics */
-    background-color: rgba(14, 77, 146, 0.4); /* Semi-transparent Deep Blue */
+    background-color: rgba(14, 77, 146, 0.3); /* Semi-transparent Deep Blue */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */}
+   /* IDE-like Code Block Styling */
+  .ide-code-block {
+    background-color: #1e1e1e; /* Dark background similar to VS Code */
+    color: #dcdcdc; /* Light gray text */
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace; /* Popular IDE font */
+    position: relative;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 400px; /* Limit the height of the code block */
+    border: 1px solid #333; /* Subtle border */
+  }
 
+  .ide-code-block pre {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  .ide-code-block code {
+    display: block;
+    white-space: pre;
+  }
+
+  /* Line numbers */
+  .ide-code-block pre {
+    counter-reset: line-number;
+  }
+
+  .ide-code-block pre code {
+    position: relative;
+    padding-left: 50px; /* Space for line numbers */
+  }
+
+  .ide-code-block pre code::before {
+    content: counter(line-number);
+    counter-increment: line-number;
+    position: absolute;
+    left: 10px;
+    width: 30px;
+    text-align: right;
+    color: #888;
+  }
+
+  /* Syntax Highlighting */
+  .ide-code-block code .keyword {
+    color: #569cd6; /* Blue for keywords */
+  }
+
+  .ide-code-block code .string {
+    color: #ce9178; /* Orange for strings */
+  }
+
+  .ide-code-block code .comment {
+    color: #6a9955; /* Green for comments */
+  }
+  .ide-code-block code .function {
+    color: #dcdcaa; /* Yellowish color for function names */
+  }
+
+  .ide-code-block code .variable {
+    color: #9cdcfe; /* Light blue for variables */
+  }
+
+  .ide-code-block code .number {
+    color: #b5cea8; /* Greenish color for numbers */
+  }
 /* Title Styles */
 .title {
     font-size: 2.5em;
