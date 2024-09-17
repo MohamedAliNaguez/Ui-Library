@@ -58,7 +58,6 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .ide-code-block pre {
     margin: 0;
     font-size: 14px;
@@ -240,7 +239,11 @@ body {
     background: var(--accent-color);
     color: var(--text-color);
 }
-
+.preview {
+    align-self: center;
+    margin: 20px auto;
+    max-width: 300px;
+}
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
     .container {
@@ -262,8 +265,7 @@ body {
 
     iframe {
         height: 150px;
-        max-width: 150px;
-    }
+        max-width: 150px;    }
 
     #category-filter {
         font-size: 14px;

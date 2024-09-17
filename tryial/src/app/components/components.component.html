@@ -30,7 +30,10 @@
 
 
           </div>
-          <iframe *ngIf="iframeSrc[category]" [src]="iframeSrc[category]" frameborder="0"></iframe>
+          <div class="preview">
+            <iframe *ngIf="iframeSrc[category]" [src]="iframeSrc[category]" frameborder="0"></iframe>
+
+          </div>
         </div>
           <button (click)="copyToClipboard(filteredComponents[category][currentComponentIndex[category]]?.code)" class="copy-button">
             COPY
