@@ -42,7 +42,7 @@ body {
 .container:hover {
     transform: translateY(-5px); /* Slight hover effect */
 }
-.d-flex{
+.d-flex {
     display: flex;
 }
 
@@ -58,6 +58,7 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .ide-code-block pre {
     margin: 0;
     font-size: 14px;
@@ -239,11 +240,13 @@ body {
     background: var(--accent-color);
     color: var(--text-color);
 }
+
 .preview {
     align-self: center;
     margin: 20px auto;
     max-width: 300px;
 }
+
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
     .container {
@@ -263,9 +266,16 @@ body {
         padding: 10px 20px;
     }
 
+    .d-flex {
+        flex-direction: column; /* Stack card and preview vertically */
+        align-items: center; /* Center align for better presentation */
+    }
+
     iframe {
-        height: 150px;
-        max-width: 150px;    }
+        height: 200px; /* Adjust height for mobile screens */
+        width: 100%; /* Make iframe take full width */
+        max-width: 100%; /* Prevent overflow */
+    }
 
     #category-filter {
         font-size: 14px;
