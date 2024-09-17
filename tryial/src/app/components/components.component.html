@@ -15,26 +15,26 @@
   <div class="category-container">
     <ng-container *ngFor="let category of filteredCategories">
       <ng-container *ngIf="filteredComponents[category]?.length">
-        <div class="category-card">
-          <h2 class="category-title">{{ category }}</h2>
+        <div class="category-card ">
+          <h2 class="category-title ">{{ category }}</h2>
+<div class="d-flex">
 
-          <div class="card-container">
-            <div class="card">
-              <h3 class="card-title">{{ filteredComponents[category][currentComponentIndex[category]]?.name }}</h3>
-              <p><strong>Usage:</strong> {{ filteredComponents[category][currentComponentIndex[category]]?.usage }}</p>
 
-              <!-- Code block inside a pre element to simulate IDE -->
-              <div class="ide-code-block">
-                <pre><code [innerHTML]="highlightedCode(filteredComponents[category][currentComponentIndex[category]]?.code)"></code></pre>
-              </div>
-
-              <button (click)="copyToClipboard(filteredComponents[category][currentComponentIndex[category]]?.code)" class="copy-button">
-                COPY
-              </button>
-
-              <iframe *ngIf="iframeSrc[category]" [src]="iframeSrc[category]" width="100%" height="300px" frameborder="0"></iframe>
+          <div class="card">
+              
+            
+            <div class="ide-code-block" >
+              <pre><code [innerHTML]="highlightedCode(filteredComponents[category][currentComponentIndex[category]]?.code)"></code></pre>
             </div>
+
+
+
           </div>
+          <iframe *ngIf="iframeSrc[category]" [src]="iframeSrc[category]" frameborder="0"></iframe>
+        </div>
+          <button (click)="copyToClipboard(filteredComponents[category][currentComponentIndex[category]]?.code)" class="copy-button">
+            COPY
+          </button>
 
           <div class="pagination-controls">
             <button (click)="prevPage(category)">&#8592; Previous</button>

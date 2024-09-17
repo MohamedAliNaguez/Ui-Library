@@ -12,7 +12,7 @@ export const routes: Routes = [
   { path: 'components', component: ComponentsComponent ,  canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent },
   // Redirect to 'register' or any default route you want when path is empty
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   // Add a wildcard route to handle any unknown paths
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/login' }
 ];

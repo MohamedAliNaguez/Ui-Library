@@ -94,3 +94,22 @@ form .text h3 a{
 form .text h3 a:hover{
   text-decoration: underline;
 }
+.logo-image {
+  display: block;
+  margin: 0;
+  max-width: 100px; /* Adjust size as needed */
+}
+
+.logo {
+  display: flex;
+align-items: center;
+margin-bottom: 5px;}
+.title {
+  margin: 10px auto; /* Adds top and bottom margin */
+  text-align: center; /* Centers text */
+  font-size: 24px; /* Adjusts the font size */
+  font-weight: bold; /* Makes the title bold */
+  color: #224566; /* Optional: You can change the color */
+  padding: 10px; /* Adds padding around the title */
+  width: 100%; /* Ensures the title takes up the full width */
+}
