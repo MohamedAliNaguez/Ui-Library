@@ -113,8 +113,9 @@ margin-bottom: 5px;}
   padding: 10px; /* Adds padding around the title */
   width: 100%; /* Ensures the title takes up the full width */
 }
-/* Wrapper and form styles (already existing) */
 
+
+/* Spinner overlay */
 .spinner-wrapper {
   position: fixed;
   top: 0;
@@ -124,13 +125,13 @@ margin-bottom: 5px;}
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 1000; /* Ensure it appears above everything */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 .spinner {
   border: 8px solid rgba(255, 255, 255, 0.3);
-  border-top: 8px solid #a6d0c2; /* Color of the spinner */
+  border-top: 8px solid #a6d0c2;
   border-radius: 50%;
   width: 60px;
   height: 60px;
