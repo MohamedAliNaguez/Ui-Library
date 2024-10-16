@@ -24,7 +24,6 @@ import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
 
 @NgModule({
   declarations: [
-  SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
   SwConfirmationDialogComponentComponent,
   SwCentredNavbarComponent,
@@ -41,12 +40,13 @@ import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
   AnOtherButtonComponent,
   SwBasicModalComponentComponent,
   SwUiComponent,
-  SwButtonComponent
+  SwButtonComponent,
+  SwCloseButtonComponent,
+  SwStyledDropdownListComponent
 ],
   imports: [
   ],
   exports: [
-  SwStyledDropdownListComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
@@ -62,6 +62,9 @@ import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
   AnOtherButtonComponent,
   SwConfirmationDialogComponentComponent,
   SwSecondaryButtonComponent,
+  SwButtonComponent,
+  SwCloseButtonComponent,
+  SwStyledDropdownListComponent,
   SwUiComponent
 ]
 })

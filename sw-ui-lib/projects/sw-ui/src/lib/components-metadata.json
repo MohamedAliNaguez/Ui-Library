@@ -9,6 +9,15 @@
     "category": "buttons"
   },
   {
+    "name": "lib-sw-button",
+    "selector": "lib-sw-button",
+    "description": "A description for lib-sw-button",
+    "usage": "<lib-sw-button></lib-sw-button>",
+    "code": "\n          <style>\n            .cancel-button {\n    background-color: #ff4d4d; /* Red color for cancel */\n    color: white;\n    border: none;\n    padding: 10px 20px;\n    font-size: 16px;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: background-color 0.3s ease;\n  }\n  \n  .cancel-button:hover {\n    background-color: #ff1a1a; /* Darker red on hover */\n  }\n  \n          </style>\n          <button class=\"cancel-button\">Cancel</button>\n\n        ",
+    "path": "buttons/sw-button/sw-button.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-close-button",
     "selector": "lib-sw-close-button",
     "description": "A description for lib-sw-close-button",
