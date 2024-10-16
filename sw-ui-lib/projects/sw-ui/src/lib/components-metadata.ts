@@ -1,5 +1,14 @@
 export const componentsMetadata = [
   {
+    "name": "lib-an-other-button",
+    "selector": "lib-an-other-button",
+    "description": "A description for lib-an-other-button",
+    "usage": "<lib-an-other-button></lib-an-other-button>",
+    "code": "\n          <style>\n            .submit-btn {\n    background-color: #0e4d92; /* Marine blue */\n    color: #fff; /* White text */\n    font-size: 16px;\n    padding: 10px 20px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    transition: background-color 0.3s ease, transform 0.2s ease;\n  }\n  \n  .submit-btn:hover {\n    background-color: #0c3b73; /* Darker blue on hover */\n    transform: scale(1.05);\n  }\n  \n  .submit-btn:active {\n    background-color: #092c57; /* Even darker blue on click */\n    transform: scale(1);\n  }\n  \n  .submit-btn:disabled {\n    background-color: #a6d0c2; /* Greyish green when disabled */\n    cursor: not-allowed;\n    opacity: 0.6;\n  }\n  \n          </style>\n          <button class=\"submit-btn\" type=\"submit\">\n    Submit\n  </button>\n  \n        ",
+    "path": "buttons/an-other-button/an-other-button.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-close-button",
     "selector": "lib-sw-close-button",
     "description": "A description for lib-sw-close-button",
