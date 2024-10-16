@@ -23,7 +23,6 @@ import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-butto
 
 @NgModule({
   declarations: [
-  SwUiComponent,
   SwCloseButtonComponent,
   SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
@@ -40,12 +39,12 @@ import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-butto
   SwTextAreaComponentComponent,
   SwSimpleNavbarComponent,
   AnOtherButtonComponent,
-  SwBasicModalComponentComponent
+  SwBasicModalComponentComponent,
+  SwUiComponent
 ],
   imports: [
   ],
   exports: [
-  SwCloseButtonComponent,
   SwSecondaryButtonComponent,
   SwStyledDropdownListComponent,
   SwSuccessButtonComponent,
@@ -62,6 +61,7 @@ import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-butto
   SwBasicModalComponentComponent,
   AnOtherButtonComponent,
   SwConfirmationDialogComponentComponent,
+  SwCloseButtonComponent,
   SwUiComponent
 ]
 })
