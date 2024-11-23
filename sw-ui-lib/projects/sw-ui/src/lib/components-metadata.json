@@ -18,6 +18,15 @@
     "category": "buttons"
   },
   {
+    "name": "lib-purplebutton",
+    "selector": "lib-purplebutton",
+    "description": "A description for lib-purplebutton",
+    "usage": "<lib-purplebutton></lib-purplebutton>",
+    "code": "\n          <style>\n            \n          </style>\n          <p>purplebutton works!</p>\n\n        ",
+    "path": "buttons/purplebutton/purplebutton.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-button",
     "selector": "lib-sw-button",
     "description": "A description for lib-sw-button",
