@@ -27,7 +27,6 @@ import { YellowbuttonComponent } from './buttons/yellowbutton/yellowbutton.compo
 
 @NgModule({
   declarations: [
-  SwPrimaryButtonComponent,
   SwRightAlignedNavbarComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
@@ -48,12 +47,12 @@ import { YellowbuttonComponent } from './buttons/yellowbutton/yellowbutton.compo
   PurplebuttonComponent,
   SwConfirmationDialogComponentComponent,
   SwCentredNavbarComponent,
+  SwPrimaryButtonComponent,
   YellowbuttonComponent
 ],
   imports: [
   ],
   exports: [
-  SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
@@ -73,6 +72,8 @@ import { YellowbuttonComponent } from './buttons/yellowbutton/yellowbutton.compo
   PurplebuttonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
+  YellowbuttonComponent,
+  SwCentredNavbarComponent,
   SwUiComponent
 ]
 })

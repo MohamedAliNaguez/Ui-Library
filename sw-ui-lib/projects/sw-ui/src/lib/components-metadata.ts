@@ -72,6 +72,15 @@ export const componentsMetadata = [
     "category": "buttons"
   },
   {
+    "name": "lib-yellowbutton",
+    "selector": "lib-yellowbutton",
+    "description": "A description for lib-yellowbutton",
+    "usage": "<lib-yellowbutton></lib-yellowbutton>",
+    "code": "\n          <style>\n            /* Style for the yellow test button */\n.yellow-btn {\n    background-color: #f1c40f;  /* Yellow color */\n    color: black;\n    border: none;\n    padding: 15px 30px;\n    font-size: 16px;\n    cursor: pointer;\n    border-radius: 5px;\n    transition: background-color 0.3s ease, transform 0.2s ease;\n  }\n  \n  /* Hover effect */\n  .yellow-btn:hover {\n    background-color: #d4ac0d;  /* Slightly darker yellow on hover */\n    transform: scale(1.1);  /* Button grows slightly when hovered */\n  }\n  \n  /* Active effect */\n  .yellow-btn:active {\n    background-color: #b7950b;  /* Even darker yellow on click */\n  }\n  \n          </style>\n          <button class=\"yellow-btn\">Test Button</button>\n\n        ",
+    "path": "buttons/yellowbutton/yellowbutton.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-centred-navbar",
     "selector": "lib-sw-centred-navbar",
     "description": "A description for lib-sw-centred-navbar",
