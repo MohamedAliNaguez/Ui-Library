@@ -17,3 +17,4 @@ export * from './lib/modals/sw-confirmation-dialog-component/sw-confirmation-dia
 export * from './lib/sw-ui.module';
 export * from './lib/buttons/sw-close-button/sw-close-button.component';
 export * from './lib/buttons/an-other-button/an-other-button.component';
+export * from './lib/buttons/sw-button/sw-button.component';
