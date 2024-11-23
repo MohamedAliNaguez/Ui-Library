@@ -1,0 +1,23 @@
+/* Style for the pink test button */
+.pink-btn {
+    background-color: #ff66b2;  /* Pink color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect */
+  .pink-btn:hover {
+    background-color: #ff3385;  /* Slightly darker pink on hover */
+    transform: scale(1.1);  /* Button grows slightly when hovered */
+  }
+  
+  /* Active effect */
+  .pink-btn:active {
+    background-color: #ff1a66;  /* Even darker pink on click */
+  }
+  

@@ -19,6 +19,7 @@ import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-butto
 import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-button.component';
 import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
 import { NewSWBUttonComponent } from './buttons/new-swbutton/new-swbutton.component';
+import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
 
 
 
@@ -42,12 +43,8 @@ import { NewSWBUttonComponent } from './buttons/new-swbutton/new-swbutton.compon
   SwBasicModalComponentComponent,
   SwUiComponent,
   SwButtonComponent,
-<<<<<<< HEAD
-  NewSWBUttonComponent
-=======
-  SwCloseButtonComponent,
-  SwStyledDropdownListComponent
->>>>>>> cf533d62974550dc6e56137452e817730a5e79d5
+  NewSWBUttonComponent,
+  PinkbuttonComponent
 ],
   imports: [
   ],
@@ -68,8 +65,6 @@ import { NewSWBUttonComponent } from './buttons/new-swbutton/new-swbutton.compon
   SwConfirmationDialogComponentComponent,
   SwSecondaryButtonComponent,
   SwButtonComponent,
-  SwCloseButtonComponent,
-  SwStyledDropdownListComponent,
   SwUiComponent
 ]
 })
