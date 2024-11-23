@@ -20,6 +20,7 @@ import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-butto
 import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
 import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
 import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.component';
+import { YellowbuttonComponent } from './buttons/yellowbutton/yellowbutton.component';
 
 
 
@@ -46,7 +47,8 @@ import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.compo
   SwAlertBoxComponentComponent,
   PurplebuttonComponent,
   SwConfirmationDialogComponentComponent,
-  SwCentredNavbarComponent
+  SwCentredNavbarComponent,
+  YellowbuttonComponent
 ],
   imports: [
   ],

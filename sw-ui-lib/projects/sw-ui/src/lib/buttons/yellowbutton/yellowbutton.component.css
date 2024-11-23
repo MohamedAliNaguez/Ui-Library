@@ -1,0 +1,23 @@
+/* Style for the yellow test button */
+.yellow-btn {
+    background-color: #f1c40f;  /* Yellow color */
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect */
+  .yellow-btn:hover {
+    background-color: #d4ac0d;  /* Slightly darker yellow on hover */
+    transform: scale(1.1);  /* Button grows slightly when hovered */
+  }
+  
+  /* Active effect */
+  .yellow-btn:active {
+    background-color: #b7950b;  /* Even darker yellow on click */
+  }
+  
