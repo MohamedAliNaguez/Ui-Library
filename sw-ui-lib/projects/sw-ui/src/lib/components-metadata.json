@@ -9,6 +9,15 @@
     "category": "buttons"
   },
   {
+    "name": "lib-pinkbutton",
+    "selector": "lib-pinkbutton",
+    "description": "A description for lib-pinkbutton",
+    "usage": "<lib-pinkbutton></lib-pinkbutton>",
+    "code": "\n          <style>\n            /* Style for the pink test button */\n.pink-btn {\n    background-color: #ff66b2;  /* Pink color */\n    color: white;\n    border: none;\n    padding: 15px 30px;\n    font-size: 16px;\n    cursor: pointer;\n    border-radius: 5px;\n    transition: background-color 0.3s ease, transform 0.2s ease;\n  }\n  \n  /* Hover effect */\n  .pink-btn:hover {\n    background-color: #ff3385;  /* Slightly darker pink on hover */\n    transform: scale(1.1);  /* Button grows slightly when hovered */\n  }\n  \n  /* Active effect */\n  .pink-btn:active {\n    background-color: #ff1a66;  /* Even darker pink on click */\n  }\n  \n          </style>\n          <button class=\"pink-btn\">Test Button</button>\n\n        ",
+    "path": "buttons/pinkbutton/pinkbutton.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-sw-button",
     "selector": "lib-sw-button",
     "description": "A description for lib-sw-button",

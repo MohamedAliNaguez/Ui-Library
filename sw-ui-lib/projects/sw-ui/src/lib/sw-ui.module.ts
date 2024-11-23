@@ -25,7 +25,6 @@ import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
 
 @NgModule({
   declarations: [
-  SwAlertBoxComponentComponent,
   SwConfirmationDialogComponentComponent,
   SwCentredNavbarComponent,
   SwPrimaryButtonComponent,
@@ -42,12 +41,14 @@ import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
   SwBasicModalComponentComponent,
   SwUiComponent,
   SwButtonComponent,
-  PinkbuttonComponent
+  PinkbuttonComponent,
+  SwCloseButtonComponent,
+  SwStyledDropdownListComponent,
+  SwAlertBoxComponentComponent
 ],
   imports: [
   ],
   exports: [
-  SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
   SwIconsDropdownListComponent,
   SwCentredNavbarComponent,
@@ -63,6 +64,10 @@ import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
   SwConfirmationDialogComponentComponent,
   SwSecondaryButtonComponent,
   SwButtonComponent,
+  PinkbuttonComponent,
+  SwCloseButtonComponent,
+  SwSuccessButtonComponent,
+  SwStyledDropdownListComponent,
   SwUiComponent
 ]
 })
