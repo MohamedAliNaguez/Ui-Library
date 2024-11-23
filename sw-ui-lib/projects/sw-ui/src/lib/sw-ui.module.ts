@@ -19,6 +19,7 @@ import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-butto
 import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-button.component';
 import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
 import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
+import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.component';
 
 
 
@@ -44,7 +45,8 @@ import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
   PinkbuttonComponent,
   SwCloseButtonComponent,
   SwStyledDropdownListComponent,
-  SwAlertBoxComponentComponent
+  SwAlertBoxComponentComponent,
+  PurplebuttonComponent
 ],
   imports: [
   ],
