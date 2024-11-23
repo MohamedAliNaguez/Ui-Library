@@ -18,7 +18,6 @@ import { SwAlertBoxComponentComponent } from './modals/sw-alert-box-component/sw
 import { SwCloseButtonComponent } from './buttons/sw-close-button/sw-close-button.component';
 import { AnOtherButtonComponent } from './buttons/an-other-button/an-other-button.component';
 import { SwButtonComponent } from './buttons/sw-button/sw-button.component';
-import { NewSWBUttonComponent } from './buttons/new-swbutton/new-swbutton.component';
 import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
 
 
@@ -43,7 +42,6 @@ import { PinkbuttonComponent } from './buttons/pinkbutton/pinkbutton.component';
   SwBasicModalComponentComponent,
   SwUiComponent,
   SwButtonComponent,
-  NewSWBUttonComponent,
   PinkbuttonComponent
 ],
   imports: [
