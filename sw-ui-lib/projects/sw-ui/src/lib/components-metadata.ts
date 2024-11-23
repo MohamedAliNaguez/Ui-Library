@@ -22,7 +22,7 @@ export const componentsMetadata = [
     "selector": "lib-purplebutton",
     "description": "A description for lib-purplebutton",
     "usage": "<lib-purplebutton></lib-purplebutton>",
-    "code": "\n          <style>\n            \n          </style>\n          <p>purplebutton works!</p>\n\n        ",
+    "code": "\n          <style>\n            /* Style for the purple test button */\n.purple-btn {\n    background-color: #9b59b6;  /* Purple color */\n    color: white;\n    border: none;\n    padding: 15px 30px;\n    font-size: 16px;\n    cursor: pointer;\n    border-radius: 5px;\n    transition: background-color 0.3s ease, transform 0.2s ease;\n  }\n  \n  /* Hover effect */\n  .purple-btn:hover {\n    background-color: #8e44ad;  /* Slightly darker purple on hover */\n    transform: scale(1.1);  /* Button grows slightly when hovered */\n  }\n  \n  /* Active effect */\n  .purple-btn:active {\n    background-color: #732d91;  /* Even darker purple on click */\n  }\n  \n          </style>\n          <button class=\"purple-btn\">Test Button</button>\n\n        ",
     "path": "buttons/purplebutton/purplebutton.component.ts",
     "category": "buttons"
   },

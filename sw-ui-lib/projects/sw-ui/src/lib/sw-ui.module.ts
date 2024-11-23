@@ -26,7 +26,6 @@ import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.compo
 
 @NgModule({
   declarations: [
-  SwCentredNavbarComponent,
   SwPrimaryButtonComponent,
   SwRightAlignedNavbarComponent,
   SwSecondaryButtonComponent,
@@ -46,12 +45,12 @@ import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.compo
   SwStyledDropdownListComponent,
   SwAlertBoxComponentComponent,
   PurplebuttonComponent,
-  SwConfirmationDialogComponentComponent
+  SwConfirmationDialogComponentComponent,
+  SwCentredNavbarComponent
 ],
   imports: [
   ],
   exports: [
-  SwIconsDropdownListComponent,
   SwCentredNavbarComponent,
   SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
@@ -71,6 +70,7 @@ import { PurplebuttonComponent } from './buttons/purplebutton/purplebutton.compo
   SwStyledDropdownListComponent,
   PurplebuttonComponent,
   SwBasicDropdownListComponent,
+  SwIconsDropdownListComponent,
   SwUiComponent
 ]
 })
