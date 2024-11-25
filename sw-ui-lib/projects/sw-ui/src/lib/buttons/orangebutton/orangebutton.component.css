@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .orange-button {
+    background-color: #ff9800; /* Orange color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .orange-button:hover {
+    background-color: #e67e00; /* Darker orange on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .orange-button:active {
+    background-color: #cc6d00; /* Even darker orange on click */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
