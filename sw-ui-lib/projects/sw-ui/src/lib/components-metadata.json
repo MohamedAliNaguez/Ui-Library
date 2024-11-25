@@ -9,6 +9,15 @@
     "category": "buttons"
   },
   {
+    "name": "lib-orangebutton",
+    "selector": "lib-orangebutton",
+    "description": "A description for lib-orangebutton",
+    "usage": "<lib-orangebutton></lib-orangebutton>",
+    "code": "\n          <style>\n            body {\n    font-family: Arial, sans-serif;\n    background-color: #f9f9f9;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n    margin: 0;\n  }\n  \n  .button-container {\n    text-align: center;\n  }\n  \n  .orange-button {\n    background-color: #ff9800; /* Orange color */\n    color: #fff; /* White text */\n    border: none;\n    border-radius: 8px;\n    padding: 12px 24px;\n    font-size: 16px;\n    font-weight: bold;\n    cursor: pointer;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n    transition: background-color 0.3s ease, box-shadow 0.3s ease;\n  }\n  \n  .orange-button:hover {\n    background-color: #e67e00; /* Darker orange on hover */\n    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);\n  }\n  \n  .orange-button:active {\n    background-color: #cc6d00; /* Even darker orange on click */\n    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);\n  }\n  \n          </style>\n          <button class=\"orange-button\">Click Me</button>\n\n        ",
+    "path": "buttons/orangebutton/orangebutton.component.ts",
+    "category": "buttons"
+  },
+  {
     "name": "lib-pinkbutton",
     "selector": "lib-pinkbutton",
     "description": "A description for lib-pinkbutton",

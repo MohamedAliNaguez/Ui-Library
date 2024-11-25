@@ -28,7 +28,6 @@ import { OrangebuttonComponent } from './buttons/orangebutton/orangebutton.compo
 
 @NgModule({
   declarations: [
-  SwRightAlignedNavbarComponent,
   SwSecondaryButtonComponent,
   SwSuccessButtonComponent,
   SwBasicDropdownListComponent,
@@ -50,12 +49,12 @@ import { OrangebuttonComponent } from './buttons/orangebutton/orangebutton.compo
   SwCentredNavbarComponent,
   SwPrimaryButtonComponent,
   YellowbuttonComponent,
-  OrangebuttonComponent
+  OrangebuttonComponent,
+  SwRightAlignedNavbarComponent
 ],
   imports: [
   ],
   exports: [
-  SwRightAlignedNavbarComponent,
   SwSimpleNavbarComponent,
   SwPrimaryButtonComponent,
   SwInputFieldComponentComponent,
@@ -76,6 +75,8 @@ import { OrangebuttonComponent } from './buttons/orangebutton/orangebutton.compo
   SwIconsDropdownListComponent,
   YellowbuttonComponent,
   SwCentredNavbarComponent,
+  OrangebuttonComponent,
+  SwRightAlignedNavbarComponent,
   SwUiComponent
 ]
 })

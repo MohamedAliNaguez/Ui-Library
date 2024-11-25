@@ -21,3 +21,4 @@ export * from './lib/buttons/sw-button/sw-button.component';
 export * from './lib/buttons/pinkbutton/pinkbutton.component';
 export * from './lib/buttons/purplebutton/purplebutton.component';
 export * from './lib/buttons/yellowbutton/yellowbutton.component';
+export * from './lib/buttons/orangebutton/orangebutton.component';
